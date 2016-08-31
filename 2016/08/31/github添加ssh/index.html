@@ -86,20 +86,44 @@
 
 <meta name="description" content="首先在电脑上创建ssh
 
-运行git bash，然后在终端输入以下命令：12345678910$ ssh-keygen -t rsa -C &quot;email@example.com&quot; ```  说明：  * -t 指定密钥类型，默认是 rsa ，可以省略。* -C 设置注释文字，比如邮箱。* -f 指定密钥文件存储文件名。上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为i">
+运行git bash，然后在终端输入以下命令：  
+1$ ssh-keygen -t rsa -C &quot;email@example.com&quot;
+说明：  
+
+-t 指定密钥类型，默认是 rsa ，可以省略。
+-C 设置注释文字，比如邮箱。
+-f 指定密钥文件存储文件名。
+
+上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github添加ssh">
 <meta property="og:url" content="http://yoursite.com/2016/08/31/github添加ssh/index.html">
 <meta property="og:site_name" content="赵的拇指">
 <meta property="og:description" content="首先在电脑上创建ssh
 
-运行git bash，然后在终端输入以下命令：12345678910$ ssh-keygen -t rsa -C &quot;email@example.com&quot; ```  说明：  * -t 指定密钥类型，默认是 rsa ，可以省略。* -C 设置注释文字，比如邮箱。* -f 指定密钥文件存储文件名。上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为i">
-<meta property="og:updated_time" content="2016-08-31T14:59:07.229Z">
+运行git bash，然后在终端输入以下命令：  
+1$ ssh-keygen -t rsa -C &quot;email@example.com&quot;
+说明：  
+
+-t 指定密钥类型，默认是 rsa ，可以省略。
+-C 设置注释文字，比如邮箱。
+-f 指定密钥文件存储文件名。
+
+上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直">
+<meta property="og:updated_time" content="2016-08-31T22:39:48.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github添加ssh">
 <meta name="twitter:description" content="首先在电脑上创建ssh
 
-运行git bash，然后在终端输入以下命令：12345678910$ ssh-keygen -t rsa -C &quot;email@example.com&quot; ```  说明：  * -t 指定密钥类型，默认是 rsa ，可以省略。* -C 设置注释文字，比如邮箱。* -f 指定密钥文件存储文件名。上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为i">
+运行git bash，然后在终端输入以下命令：  
+1$ ssh-keygen -t rsa -C &quot;email@example.com&quot;
+说明：  
+
+-t 指定密钥类型，默认是 rsa ，可以省略。
+-C 设置注释文字，比如邮箱。
+-f 指定密钥文件存储文件名。
+
+上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直">
 
 
 
@@ -260,6 +284,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -285,12 +328,30 @@
         <ol>
 <li><h2 id="首先在电脑上创建ssh"><a href="#首先在电脑上创建ssh" class="headerlink" title="首先在电脑上创建ssh"></a>首先在电脑上创建ssh</h2></li>
 </ol>
-<p>运行git bash，然后在终端输入以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"email@example.com"</span> </div><div class="line">```  </div><div class="line">说明：  </div><div class="line">* -t 指定密钥类型，默认是 rsa ，可以省略。</div><div class="line">* -C 设置注释文字，比如邮箱。</div><div class="line">* <span class="_">-f</span> 指定密钥文件存储文件名。</div><div class="line"></div><div class="line">上面的命令忽略了 <span class="_">-f</span> 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直接回车)，如下：  </div><div class="line">``` bash</div><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/username/.ssh/id_rsa):</div></pre></td></tr></table></figure></p>
+<p>运行git bash，然后在终端输入以下命令：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure>
+<p>说明：  </p>
+<ul>
+<li>-t 指定密钥类型，默认是 rsa ，可以省略。</li>
+<li>-C 设置注释文字，比如邮箱。</li>
+<li>-f 指定密钥文件存储文件名。</li>
+</ul>
+<p>上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直接回车)，如下：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/username/.ssh/id_rsa):</div></pre></td></tr></table></figure>
 <p>然后提示输入密码，并确认密码，此密码使用来push文件时的密码。可以不输，则push时无需输入密码。</p>
 <ol>
 <li><h2 id="在github上添加ssh"><a href="#在github上添加ssh" class="headerlink" title="在github上添加ssh"></a>在github上添加ssh</h2></li>
 </ol>
-<p>首先，copy刚刚生成的ssh key<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$ clip &lt; ~/.ssh/id_rsa.pub </div><div class="line">```  </div><div class="line">然后，登录github账号，点击右上角头像选择“setting”，在新打开的页面左侧点击“SSH and GPG keys”。  </div><div class="line">最后，在右侧页面点击“New SSH key”,输入title，以及key，title不输入默认为邮箱</div><div class="line"></div><div class="line">3. <span class="comment">## 测试</span></div><div class="line"></div><div class="line">在git bash终端下输入：  </div><div class="line">``` bash</div><div class="line">$ ssh -T git@github.com </div><div class="line">```  </div><div class="line">执行，可能会有警告，输入yes继续。然后输入创建ssh key时设置的密码（如果有）。  </div><div class="line">如果出现用户名，则表示成功，提示信息如下：  </div><div class="line">``` bash</div><div class="line">Hi sniperbo! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></div></pre></td></tr></table></figure></p>
+<p>首先，copy刚刚生成的ssh key  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
+<p>然后，登录github账号，点击右上角头像选择“setting”，在新打开的页面左侧点击“SSH and GPG keys”。<br>最后，在右侧页面点击“New SSH key”,输入title，以及key，title不输入默认为邮箱</p>
+<ol>
+<li><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2></li>
+</ol>
+<p>在git bash终端下输入：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
+<p>执行，可能会有警告，输入yes继续。然后输入创建ssh key时设置的密码（如果有）。<br>如果出现用户名，则表示成功，提示信息如下：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi sniperbo! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -402,6 +463,13 @@
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
@@ -435,7 +503,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先在电脑上创建ssh"><span class="nav-number">1.</span> <span class="nav-text">首先在电脑上创建ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在github上添加ssh"><span class="nav-number">2.</span> <span class="nav-text">在github上添加ssh</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先在电脑上创建ssh"><span class="nav-number">1.</span> <span class="nav-text">首先在电脑上创建ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在github上添加ssh"><span class="nav-number">2.</span> <span class="nav-text">在github上添加ssh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a></li></ol></div>
             
           </div>
         </section>
