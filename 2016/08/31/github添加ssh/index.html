@@ -92,9 +92,7 @@
 
 -t 指定密钥类型，默认是 rsa ，可以省略。
 -C 设置注释文字，比如邮箱。
--f 指定密钥文件存储文件名。
-
-上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直">
+-f 指定密钥文件存储文件名。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github添加ssh">
 <meta property="og:url" content="http://yoursite.com/2016/08/31/github添加ssh/index.html">
@@ -107,10 +105,8 @@
 
 -t 指定密钥类型，默认是 rsa ，可以省略。
 -C 设置注释文字，比如邮箱。
--f 指定密钥文件存储文件名。
-
-上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直">
-<meta property="og:updated_time" content="2016-09-01T08:33:23.119Z">
+-f 指定密钥文件存储文件名。">
+<meta property="og:updated_time" content="2016-09-01T08:35:11.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github添加ssh">
 <meta name="twitter:description" content="首先在电脑上创建ssh
@@ -121,9 +117,7 @@
 
 -t 指定密钥类型，默认是 rsa ，可以省略。
 -C 设置注释文字，比如邮箱。
--f 指定密钥文件存储文件名。
-
-上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直">
+-f 指定密钥文件存储文件名。">
 
 
 
@@ -366,6 +360,7 @@
 <li>-C 设置注释文字，比如邮箱。</li>
 <li>-f 指定密钥文件存储文件名。</li>
 </ul>
+<a id="more"></a>
 <p>上面的命令忽略了 -f 参数，所以执行上述命令后，会提示你输入文件名，默认为id_rsa(推荐默认，直接回车)，如下：  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/username/.ssh/id_rsa):</div></pre></td></tr></table></figure>
 <p>然后提示输入密码，并确认密码，此密码使用来push文件时的密码。可以不输，则push时无需输入密码。</p>
@@ -382,7 +377,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
 <p>执行，可能会有警告，输入yes继续。然后输入创建ssh key时设置的密码（如果有）。<br>如果出现用户名，则表示成功，提示信息如下：  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi sniperbo! You‘ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
-<a id="more"></a>
+
       
     </div>
 

@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/09/01/node-js常用命令/index.html">
 <meta property="og:site_name" content="赵的拇指">
 <meta property="og:description" content="npm install moduleNames：安装Node模块安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。node的安装分为全局模式和本地模式。一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。全局安装命令为$npm ins">
-<meta property="og:updated_time" content="2016-09-01T08:32:47.680Z">
+<meta property="og:updated_time" content="2016-09-01T08:35:52.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node.js常用命令">
 <meta name="twitter:description" content="npm install moduleNames：安装Node模块安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。node的安装分为全局模式和本地模式。一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。全局安装命令为$npm ins">
@@ -326,8 +326,11 @@
 
       
         <ol>
-<li><p>npm install moduleNames：安装Node模块<br>安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。<br>node的安装分为全局模式和本地模式。<br>一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。<br>在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。<br>全局安装命令为$npm install -g moduleName。<br>获知使用$npm set global=true来设定安装模式，$npm get global可以查看当前使用的安装模式。<br>示例：<br>npm install express<br>默认会安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6<br>npm install <name> -g<br>将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令<br>npm install <name> –save<br>安装的同时，将信息写入package.json中项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包，这样代码提交到github时，就不用提交node_modules这个文件夹了。  </name></name></p>
-</li>
+<li>npm install moduleNames：安装Node模块<br>安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。<br>node的安装分为全局模式和本地模式。<br>一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。<br>在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。<br>全局安装命令为$npm install -g moduleName。<br>获知使用$npm set global=true来设定安装模式，$npm get global可以查看当前使用的安装模式。  </li>
+</ol>
+<a id="more"></a>
+<p>示例：<br>npm install express<br>默认会安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6<br>npm install <name> -g<br>将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令<br>npm install <name> –save<br>安装的同时，将信息写入package.json中项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包，这样代码提交到github时，就不用提交node_modules这个文件夹了。  </name></name></p>
+<ol>
 <li><p>npm view moduleNames：查看node模块的package.json文件夹<br>注意事项：如果想要查看package.json文件夹下某个标签的内容，可以使用$npm view moduleName labelName</p>
 </li>
 <li><p>npm list：查看当前目录下已安装的node包<br>注意事项：Node模块搜索是从代码执行的当前目录开始的，搜索结果取决于当前使用的目录中的node_modules下的内容。$ npm list parseable=true可以目录的形式来展现当前安装的所有node包</p>
@@ -361,7 +364,7 @@
 <li><p>npm -v：查看npm安装的版本</p>
 </li>
 </ol>
-<a id="more"></a>
+
       
     </div>
 
