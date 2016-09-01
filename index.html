@@ -330,9 +330,8 @@
 
       
         
-          
-            <ol>
-<li><p>npm install moduleNames：安装Node模块<br>安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。<br>node的安装分为全局模式和本地模式。<br>一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。<br>在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。<br>全局安装命令为$npm install -g moduleName。<br>获知使用$npm set global=true来设定安装模式，$npm get global可以查看当前使用的安装模式。<br>示例：<br>npm install express<br>默认会安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6<br>npm install <name> -g<br>将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令<br>npm install <name> –save<br>安装的同时，将信息写入package.json中项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包，这样代码提交到github时，就不用提交node_modules这个文件夹了。  </name></name></p>
+          <ol>
+<li><p>npm install moduleNames：安装Node模块<br>安装完毕后会产生一个node_modules目录，其目录下就是安装的各个node模块。<br>node的安装分为全局模式和本地模式。<br>一般情况下会以本地模式运行，包会被安装到和你的应用程序代码的本地node_modules目录下。<br>在全局模式下，Node包会被安装到Node的安装目录下的node_modules下。<br>全局安装命令为$npm install -g moduleName。<br>获知使用$npm set global=true来设定安装模式，$npm get global可以查看当前使用的安装模式。<br>示例：<br>npm install express<br>默认会安装express的最新版本，也可以通过在后面加版本号的方式安装指定版本，如npm install express@3.0.6<br>npm install <name> -g<br>将包安装到全局环境中<br>但是代码中，直接通过require()的方式是没有办法调用全局安装的包的。全局的安装是供命令行使用的，就好像全局安装了vmarket后，就可以在命令行中直接运行vm命令<br>npm install <name> –save<br>安装的同时，将信息写入package.json中项目路径中如果有package.json文件时，直接使用npm install方法就可以根据dependencies配置安装所有的依赖包，这样代码提交到github时，就不用提交node_modules这个文件夹了。  </p>
 </li>
 <li><p>npm view moduleNames：查看node模块的package.json文件夹<br>注意事项：如果想要查看package.json文件夹下某个标签的内容，可以使用$npm view moduleName labelName</p>
 </li>
@@ -367,8 +366,11 @@
 <li><p>npm -v：查看npm安装的版本</p>
 </li>
 </ol>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/01/node-js常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -478,8 +480,7 @@
 
       
         
-          
-            <ul>
+          <ul>
 <li><h2 id="首先在电脑上创建ssh"><a href="#首先在电脑上创建ssh" class="headerlink" title="首先在电脑上创建ssh"></a>首先在电脑上创建ssh</h2></li>
 </ul>
 <p>运行git bash，然后在终端输入以下命令：  </p>
@@ -505,9 +506,12 @@
 <p>在git bash终端下输入：  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div></pre></td></tr></table></figure>
 <p>执行，可能会有警告，输入yes继续。然后输入创建ssh key时设置的密码（如果有）。<br>如果出现用户名，则表示成功，提示信息如下：  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi sniperbo! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></div></pre></td></tr></table></figure>
-
-          
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi sniperbo! You‘ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/31/github添加ssh/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -598,18 +602,20 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/31/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
