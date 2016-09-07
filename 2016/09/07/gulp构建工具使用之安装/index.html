@@ -98,7 +98,7 @@
 可以用来查看node与npm的版本">
 <meta property="og:image" content="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_packageJsonShow.png">
 <meta property="og:image" content="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_gulpTaskShow.png">
-<meta property="og:updated_time" content="2016-09-07T11:42:00.450Z">
+<meta property="og:updated_time" content="2016-09-07T11:45:23.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp构建工具使用之安装">
 <meta name="twitter:description" content="安装node.js
@@ -355,17 +355,10 @@
 <p><img src="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_packageJsonShow.png" alt="package.json"></p>
 <ul>
 <li><h2 id="项目安装gulp"><a href="#项目安装gulp" class="headerlink" title="项目安装gulp"></a>项目安装gulp</h2></li>
-<li><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install --save-dev gulp</div></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h3></li>
-</ul>
-<p>然后新建一个gulp的主文件“gulpfile.js”，，我们可以在该文件中定义要执行的任务。<br>在gulpfile.js中建立一个defualt任务<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'use gulp'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<ul>
-<li><h3 id="执行任务"><a href="#执行任务" class="headerlink" title="执行任务"></a>执行任务</h3></li>
-</ul>
-<p>直接在命令行中输入<code>gulp</code>命令即可运行defualt任务，如要执行指定任务则要加上任务名，如<code>gulp taskNmme</code><br><img src="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_gulpTaskShow.png" alt="gulp task"></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install --save-dev gulp</div></pre></td></tr></table></figure>
+<h3 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h3><p>然后新建一个gulp的主文件“gulpfile.js”，，我们可以在该文件中定义要执行的任务。<br>在gulpfile.js中建立一个defualt任务<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'use gulp'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h3 id="执行任务"><a href="#执行任务" class="headerlink" title="执行任务"></a>执行任务</h3><p>直接在命令行中输入<code>gulp</code>命令即可运行defualt任务，如要执行指定任务则要加上任务名，如<code>gulp taskNmme</code><br><img src="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_gulpTaskShow.png" alt="gulp task"></p>
 
       
     </div>
