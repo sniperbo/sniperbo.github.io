@@ -330,38 +330,16 @@
 
       
         
-          
-            <ul>
+          <ul>
 <li><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2></li>
 </ul>
-<p>打开<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官网</a>,根据自己的系统下载安装对应的node版本。<br>安装完之后，分别输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
-<p>可以用来查看node与npm的版本</p>
-<ul>
-<li><h2 id="全局安装gulp"><a href="#全局安装gulp" class="headerlink" title="全局安装gulp"></a>全局安装gulp</h2></li>
-</ul>
-<p>使用以下命令安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g gulp</div></pre></td></tr></table></figure></p>
-<p>不过在国内使用npm安装会非常的慢，有时候甚至安装失败，所以可以用npm的国内镜像<a href="https://npm.taobao.org/" target="_blank" rel="external">淘宝 NPM 镜像</a>，这是一个<br>完整的npmjs.org的镜像。使用方法在官网可以查看。<br>使用说明：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<p>安装结束后，就可以用cnpm替代npm执行所有的操作。</p>
-<ul>
-<li><h2 id="关于package-json"><a href="#关于package-json" class="headerlink" title="关于package.json"></a>关于package.json</h2></li>
-</ul>
-<p>package.json文件描述了一个NPM包的所有相关信息，包括作者、简介、包依赖、构建等信息。格式必须是严格的JSON格式。<br>通常我们在创建一个NPM程序时，可以使用命令，通过交互式的命令，自动生成一个package.json文件，里面包含了常用的一些字段信息，但远不止这么简单。<br>通过完善package.json文件，我们可以让npm命令更好地为我们服务。<br>创建package.json文件命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm init</div></pre></td></tr></table></figure></p>
-<p><img src="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_packageJsonShow.png" alt="package.json"></p>
-<ul>
-<li><h2 id="项目安装gulp"><a href="#项目安装gulp" class="headerlink" title="项目安装gulp"></a>项目安装gulp</h2></li>
-<li><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install --save-dev gulp</div></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="创建任务"><a href="#创建任务" class="headerlink" title="创建任务"></a>创建任务</h3></li>
-</ul>
-<p>然后新建一个gulp的主文件“gulpfile.js”，，我们可以在该文件中定义要执行的任务。<br>在gulpfile.js中建立一个defualt任务<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'use gulp'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<ul>
-<li><h3 id="执行任务"><a href="#执行任务" class="headerlink" title="执行任务"></a>执行任务</h3></li>
-</ul>
-<p>直接在命令行中输入<code>gulp</code>命令即可运行defualt任务，如要执行指定任务则要加上任务名，如<code>gulp taskNmme</code><br><img src="http://od4k4xerr.bkt.clouddn.com/gulp_use_start_gulpTaskShow.png" alt="gulp task"></p>
-
-          
+<p>打开<a href="https://nodejs.org/en/">node.js官网</a>,根据自己的系统下载安装对应的node版本。<br>安装完之后，分别输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
+<p>可以用来查看node与npm的版本<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/07/gulp构建工具的初步使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
