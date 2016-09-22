@@ -84,28 +84,16 @@
 
 
 
-<meta name="description" content="gulp重要的api有四个，分别是gulp.src()、gulp.task()、gulp.dest()、gulp.watch()，其他的参见官方文档
-
-gulp.src()
-
-gulp.src()方法是用来获取流的，这个流里的内容并不是原始的文件流，而是一个虚拟文件对象流(Vinyl files)，这个虚拟文件对象中存储着原始文件的路径、文件名、内容等信息。什么是流：在Gulp中，使用的是Node">
+<meta name="description" content="gulp重要的api有四个，分别是gulp.src()、gulp.dest()、gulp.task()、gulp.watch()，其他的参见官方文档">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gulp构建工具使用之api">
 <meta property="og:url" content="http://yoursite.com/2016/09/07/gulp构建工具使用之api/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="gulp重要的api有四个，分别是gulp.src()、gulp.task()、gulp.dest()、gulp.watch()，其他的参见官方文档
-
-gulp.src()
-
-gulp.src()方法是用来获取流的，这个流里的内容并不是原始的文件流，而是一个虚拟文件对象流(Vinyl files)，这个虚拟文件对象中存储着原始文件的路径、文件名、内容等信息。什么是流：在Gulp中，使用的是Node">
-<meta property="og:updated_time" content="2016-09-22T13:52:18.016Z">
+<meta property="og:description" content="gulp重要的api有四个，分别是gulp.src()、gulp.dest()、gulp.task()、gulp.watch()，其他的参见官方文档">
+<meta property="og:updated_time" content="2016-09-22T14:12:12.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp构建工具使用之api">
-<meta name="twitter:description" content="gulp重要的api有四个，分别是gulp.src()、gulp.task()、gulp.dest()、gulp.watch()，其他的参见官方文档
-
-gulp.src()
-
-gulp.src()方法是用来获取流的，这个流里的内容并不是原始的文件流，而是一个虚拟文件对象流(Vinyl files)，这个虚拟文件对象中存储着原始文件的路径、文件名、内容等信息。什么是流：在Gulp中，使用的是Node">
+<meta name="twitter:description" content="gulp重要的api有四个，分别是gulp.src()、gulp.dest()、gulp.task()、gulp.watch()，其他的参见官方文档">
 
 
 
@@ -334,13 +322,14 @@ gulp.src()方法是用来获取流的，这个流里的内容并不是原始的�
       
 
       
-        <p>gulp重要的api有四个，分别是<code>gulp.src()</code>、<code>gulp.task()</code>、<code>gulp.dest()</code>、<code>gulp.watch()</code>，其他的参见<br><a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md" target="_blank" rel="external">官方文档</a></p>
+        <p>gulp重要的api有四个，分别是<code>gulp.src()</code>、<code>gulp.dest()</code>、<code>gulp.task()</code>、<code>gulp.watch()</code>，其他的参见<br><a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md" target="_blank" rel="external">官方文档</a></p>
+<a id="more"></a>
 <ul>
 <li><h2 id="gulp-src"><a href="#gulp-src" class="headerlink" title="gulp.src()"></a>gulp.src()</h2></li>
 </ul>
 <p>gulp.src()方法是用来获取流的，这个流里的内容并不是原始的文件流，而是一个虚拟文件对象流(Vinyl files)，<br>这个虚拟文件对象中存储着原始文件的路径、文件名、内容等信息。<br><strong>什么是流：</strong><br>在Gulp中，使用的是Nodejs中的stream(流)，先获取到需要的stream，然后可以通过stream的pipe()方法把流导入到你想要的地方，比如Gulp的插件中，经过插件处理后的流又可以继续导入到其他插件中，当然也可以把流写入到文件中。<br>而在Grunt中，Grunt主要是以文件为媒介来运行它的工作流的，比如在Grunt中执行完一项任务后，会把结果写入到一个临时文件中，然后可以在这个临时文件内容的基础上执行其它任务，执行完成后又把结果写入到临时文件中，然后又以这个为基础继续执行其它任务…就这样反复下去。<br>所以，Gulp的速度会比Grunt快。</p>
 <p>用法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.src(globs[, options])</div></pre></td></tr></table></figure></p>
-<p><em>globs</em>参数是文件匹配模式(类似正则表达式)，用来匹配文件路径(包括文件名),也可以使指定文件。  </p>
+<p><strong>globs</strong>参数是文件匹配模式(类似正则表达式)，用来匹配文件路径(包括文件名),也可以使指定文件。  </p>
 <ol>
 <li><code>*</code> 匹配文件路径中的0个或多个字符，但不会匹配路径分隔符，除非路径分隔符出现在末尾</li>
 <li><code>**</code> 匹配路径中的0个或多个目录及其子目录,需要单独出现，即它左右不能有其他东西了。如果出现在末尾，也能匹配文件。</li>
@@ -361,8 +350,16 @@ gulp.src()方法是用来获取流的，这个流里的内容并不是原始的�
 </li>
 </ol>
 <p>有多种匹配模式的时候可以使用数组,如：<code>gulp.src([&#39;js/*.js&#39;,&#39;css/*.css&#39;,&#39;*.html&#39;])</code></p>
-<p><em>options</em>为可选参数,有3个属性buffer、read、base。</p>
-<p>buffer：  类型：<code>Boolean</code>  默认：<code>true</code> ，设置为<code>false</code>，将返回file.content的流并且不缓冲文件，处理大文件时非常有用；<br>read：  类型：<code>Boolean</code>  默认：<code>true</code> ，设置<code>false</code>，将不执行读取文件操作，返回null；<br>base：  类型：<code>String</code>  设置输出路径以某个路径的某个组成部分为基础向后拼接，具体看下面示例：</p>
+<p><strong>options</strong>为可选参数,有3个属性buffer、read、base。</p>
+<p><em>options.buffer</em>：  类型：<code>Boolean</code>  默认：<code>true</code> ，设置为<code>false</code>，将返回file.content的流并且不缓冲文件，处理大文件时非常有用；<br><em>options.read</em>：  类型：<code>Boolean</code>  默认：<code>true</code> ，设置<code>false</code>，将不执行读取文件操作，返回null；<br><em>options.base</em>：  类型：<code>String</code>  ,设置输出路径以某个路径的某个组成部分为基础向后拼接。</p>
+<ul>
+<li><h2 id="gulp-dest"><a href="#gulp-dest" class="headerlink" title="gulp.dest()"></a>gulp.dest()</h2></li>
+</ul>
+<p>gulp.dest()方法是用来写文件的，其语法为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.dest(path[,options])</div></pre></td></tr></table></figure>
+<p><strong>path</strong>:类型： <code>String</code> or <code>Function</code><br>gulp的流程一般是：先通过<code>gulp.src()</code>方法获取到想要处理的文件流，然后将文件流通过<code>pipe()</code>方法导入到gulp的插件中，最后把经过插件处理后的流再通过<code>pipe()</code>方法导入到<code>gulp.dest()</code>中，<code>gulp.dest()</code>方法将流中的内容写入到文件中，这里首先需要弄清楚的一点是，我们给<code>gulp.dest()</code>传入的路径参数，只能用来指定要生成的文件的目录，而不能指定生成文件的文件名，它生成文件的文件名使用的是导入到它的文件流自身的文件名，所以生成的文件名是由导入到它的文件流决定的，即使我们给它传入一个带有文件名的路径参数，然后它也会把这个文件名当做目录名<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line">gulp.src(<span class="string">'script/A.js'</span>)</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/B.js'</span>));</div><div class="line"><span class="comment">//最终生成的文件路径为 dist/B.js/A.js,而不是dist/B.js</span></div></pre></td></tr></table></figure></p>
+<p><code>gulp.dest(path)</code>生成的文件路径是我们传入的path参数后面再加上<code>gulp.src()</code>中有通配符开始出现的那部分路径<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = reruire(<span class="string">'gulp'</span>);</div><div class="line"><span class="comment">//有通配符开始出现的那部分路径为 **/*.js</span></div><div class="line">gulp.src(<span class="string">'script/**/*.js'</span>)</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist'</span>)); <span class="comment">//最后生成的文件路径为 `dist/**/*.js`</span></div><div class="line"><span class="comment">//如果 **/*.js 匹配到的文件为 js/A.js ,则生成的文件路径为 `dist/js/A.js`</span></div></pre></td></tr></table></figure></p>
+<p><strong>options</strong>:<br><em>options.cwd</em> 类型： <code>String</code> 默认值： <code>process.cwd()</code> 输出目录的 <code>cwd</code> 参数，只在所给的输出目录是相对路径时候有效。<br><em>options.mode</em> 类型： <code>String</code> 默认值： <code>0777</code> 八进制权限字符，用以定义所有在输出目录中所创建的目录的权限。</p>
 
       
     </div>
@@ -555,7 +552,7 @@ gulp.src()方法是用来获取流的，这个流里的内容并不是原始的�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp-src"><span class="nav-number">1.</span> <span class="nav-text">gulp.src()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp-src"><span class="nav-number">1.</span> <span class="nav-text">gulp.src()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp-dest"><span class="nav-number">2.</span> <span class="nav-text">gulp.dest()</span></a></li></ol></div>
             
           </div>
         </section>
