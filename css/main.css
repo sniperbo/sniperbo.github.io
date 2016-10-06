@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #400b1a;
+  background: #6cbaff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2293,10 +2293,9 @@ hr {
   display: none;
 }
 .posts-expand .post {
-  margin-top: 120px;
+  margin-top: 40px;
   padding: 10px;
   background-color: #fff;
-  border-radius: 6px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.04) inset;
 }
 .posts-expand .post:first-child {
@@ -2389,6 +2388,9 @@ hr {
     float: none;
     padding: 0 10px;
   }
+}
+.container .main-inner {
+  background-color: #f5f5f5;
 }
 @media (max-width: 767px) {
   .container .main-inner {
