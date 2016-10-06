@@ -283,8 +283,8 @@ a {
   word-wrap: break-word;
 }
 a:hover {
-  color: #37d7b6;
-  border-bottom-color: #37d7b6;
+  color: #00a381;
+  border-bottom-color: #00a381;
 }
 ul {
   list-style: none;
@@ -1353,7 +1353,7 @@ pre .javascript .function {
   border-bottom: none;
 }
 .post-nav-item a:hover {
-  color: #37d7b6;
+  color: #00a381;
   border-bottom: none;
 }
 .post-nav-item a:active {
