@@ -843,7 +843,7 @@ pre .javascript .function {
   z-index: 1050;
   padding: 0 6px;
   width: 25px;
-  background: #222;
+  background: #000;
   font-size: 12px;
   opacity: 1;
   color: #fff;
@@ -1433,7 +1433,7 @@ pre .javascript .function {
   width: 15px;
   height: 15px;
   padding: 5px;
-  background: #222;
+  background: #000;
   line-height: 0;
   z-index: 1050;
   cursor: pointer;
@@ -1662,7 +1662,8 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #fff;
+  color: #999;
+  background-color: #fff;
 }
 .footer img {
   border: none;
