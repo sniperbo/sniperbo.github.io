@@ -728,7 +728,7 @@ pre .javascript .function {
   font-size: 14px;
   color: #fff;
   background: #222;
-  border: 2px solid #222;
+  border: 1px solid #5980e1;
   text-decoration: none;
   border-radius: 0;
   transition-property: background-color;
@@ -1662,7 +1662,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #fff;
 }
 .footer img {
   border: none;
