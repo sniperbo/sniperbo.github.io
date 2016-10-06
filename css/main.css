@@ -277,7 +277,7 @@ p {
   margin: 0 0 25px 0;
 }
 a {
-  color: #5980e1;
+  color: #00a381;
   text-decoration: none;
   border-bottom: 1px solid #999;
   word-wrap: break-word;
@@ -728,7 +728,7 @@ pre .javascript .function {
   font-size: 14px;
   color: #fff;
   background: #222;
-  border: 1px solid #5980e1;
+  border: 1px solid #00a381;
   text-decoration: none;
   border-radius: 0;
   transition-property: background-color;
@@ -790,6 +790,8 @@ pre .javascript .function {
 .pagination .next:hover,
 .pagination .page-number:hover {
   border-color: #222;
+  background-color: #ccc;
+  color: #fff;
 }
 .pagination .space {
   padding: 0;
@@ -803,7 +805,7 @@ pre .javascript .function {
 }
 .pagination .page-number.current {
   color: #fff;
-  background: #ccc;
+  background: #00a381;
   border-color: #ccc;
 }
 @media (max-width: 767px) {
@@ -1307,7 +1309,7 @@ pre .javascript .function {
   margin-top: 20px;
 }
 .post-more-link .btn {
-  color: #5980e1;
+  color: #00a381;
   font-size: 14px;
   background: transparent;
   border-radius: 0;
@@ -1339,7 +1341,7 @@ pre .javascript .function {
   display: inline-block;
   line-height: 25px;
   font-size: 14px;
-  color: #5980e1;
+  color: #00a381;
   border-bottom: none;
 }
 .post-nav-item a:hover {
