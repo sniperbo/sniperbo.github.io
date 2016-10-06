@@ -1547,10 +1547,10 @@ pre .javascript .function {
   vertical-align: middle;
   margin-right: 3px;
   content: " ";
-  width: 4px;
-  height: 4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #2d65f1;
+  background: #00a381;
 }
 .links-of-blogroll {
   font-size: 13px;
