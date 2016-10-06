@@ -736,8 +736,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
-.btn:hover,
-.post-more-link .btn:hover {
+.btn:hover {
   border-color: #2d65f1;
   color: #2d65f1;
   background: #fff;
@@ -1315,6 +1314,10 @@ pre .javascript .function {
   boreder: 1px solid #00a381;
   border-radius: 3px;
   line-height: 2;
+}
+.post-more-link .btn:hover {
+  color: #fff;
+  background: #00a381;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -2350,7 +2353,7 @@ hr {
   text-align: left;
 }
 .post-more-link a {
-  padding: 0;
+  padding: 4px 6px;
   font-size: 14px;
   color: #666;
   background: none;
