@@ -283,8 +283,8 @@ a {
   word-wrap: break-word;
 }
 a:hover {
-  color: #2d65f1;
-  border-bottom-color: #2d65f1;
+  color: #37d7b6;
+  border-bottom-color: #37d7b6;
 }
 ul {
   list-style: none;
@@ -737,8 +737,8 @@ pre .javascript .function {
   transition-delay: 0s;
 }
 .btn:hover {
-  border-color: #2d65f1;
-  color: #2d65f1;
+  border-color: #00a381;
+  color: #00a381;
   background: #fff;
 }
 .btn-bar {
@@ -1353,7 +1353,7 @@ pre .javascript .function {
   border-bottom: none;
 }
 .post-nav-item a:hover {
-  color: #2d65f1;
+  color: #37d7b6;
   border-bottom: none;
 }
 .post-nav-item a:active {
