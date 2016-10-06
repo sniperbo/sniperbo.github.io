@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8bff33;
+  background: #ffff2b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2250,6 +2250,7 @@ hr {
   border: none;
   border-radius: 2px;
   transition-property: background;
+  color: #999;
 }
 @media (max-width: 767px) {
   .menu .menu-item a {
@@ -2257,7 +2258,7 @@ hr {
   }
 }
 .menu .menu-item a:hover {
-  background: #e1e1e1;
+  color: #fff;
 }
 .menu a::before {
   display: none;
