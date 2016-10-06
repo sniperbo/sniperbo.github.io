@@ -2299,6 +2299,7 @@ hr {
   padding: 10px;
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.04) inset;
+  overflow: hidden;
 }
 .posts-expand .post:first-child {
   margin-top: 0;
