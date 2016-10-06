@@ -2354,8 +2354,8 @@ hr {
   font-size: 14px;
   color: #666;
   background: none;
-  border: none;
-  border-bottom: 2px solid #666;
+  border: 1px solid #00a381;
+  border-radius: 3px;
   transition-property: border;
 }
 @media (max-width: 767px) {
@@ -2369,7 +2369,8 @@ hr {
   }
 }
 .post-more-link a:hover {
-  border-bottom-color: #222;
+  color: #fff;
+  background: #00a381;
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
