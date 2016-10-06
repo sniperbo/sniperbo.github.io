@@ -284,7 +284,7 @@ a {
 }
 a:hover {
   color: #2d65f1;
-  border-bottom-color: #222;
+  border-bottom-color: #2d65f1;
 }
 ul {
   list-style: none;
@@ -738,8 +738,8 @@ pre .javascript .function {
 }
 .btn:hover,
 .post-more-link .btn:hover {
-  border-color: #222;
-  color: #222;
+  border-color: #2d65f1;
+  color: #2d65f1;
   background: #fff;
 }
 .btn-bar {
@@ -1305,6 +1305,7 @@ pre .javascript .function {
   }
 }
 .post-more-link {
+  float: right;
   margin-top: 50px;
 }
 .post-more-link .btn {
