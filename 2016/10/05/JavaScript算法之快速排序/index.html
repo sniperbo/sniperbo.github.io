@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="介绍：
+<meta name="description" content="介绍
 快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript算法之快速排序">
 <meta property="og:url" content="http://yoursite.com/2016/10/05/JavaScript算法之快速排序/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="介绍：
+<meta property="og:description" content="介绍
 快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。">
-<meta property="og:updated_time" content="2016-10-05T13:51:04.765Z">
+<meta property="og:updated_time" content="2016-10-06T03:48:14.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript算法之快速排序">
-<meta name="twitter:description" content="介绍：
+<meta name="twitter:description" content="介绍
 快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。">
 
 
@@ -325,19 +325,19 @@
       
 
       
-        <h2 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h2><blockquote>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote>
 <p>快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
 </blockquote>
 <a id="more"></a>
 <p>以上摘自<a href="http://baike.baidu.com/link?url=VUy9SLKbR6ELnmQo2CDRBN0elaF0MTtmEjA1l7blXyVXeclRrDXa3jTJVZP48CQulI5pvI0akmXFrvGJgovGM9p2uqeLq53sh6VxLaIq_1XhbKbL_G0OmZ0sUfTrwBD25gxgY1PDUUTnTlJJaHsW_nHw_gsP4-R04QFgZQpvSATyN35hEYHYfBRWl8KLhi87yGNwodIbC-jvvGsqRBTtIWWL9Gceyd7ZMvL_hQe4RNk99vii_5ZCx_05fYpMkYJ1" target="_blank" rel="external">百度百科</a></p>
 <p>稳定性 <em>不稳定</em><br>时间复杂度 <em>最好</em> <code>O(nlogn)</code><br>时间复杂度 <em>最差</em> <code>O(n^2)</code></p>
 <p>快速排序是对冒泡排序的一种本质改进。它的基本思想是通过一趟扫描后，使得排序序列的长度能大幅度地减少。在冒泡排序中，一次扫描只能确保最大数值的数移到正确位置，而待排序序列的长度可能只减少1。快速排序通过一趟扫描，就能确保某个数（以它为基准点吧）的左边各数都比它小，右边各数都比它大。然后又用同样的方法处理它左右两边的数，直到基准点的左右只有一个元素为止。</p>
-<h2 id="实现步骤："><a href="#实现步骤：" class="headerlink" title="实现步骤："></a>实现步骤：</h2><ol>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
 <li>在数据集之中，选择一个元素作为”基准”</li>
 <li>所有小于”基准”的元素，都移到”基准”的左边；所有大于”基准”的元素，都移到”基准”的右边。</li>
 <li>对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。</li>
 </ol>
-<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> left = [];</div><div class="line">    <span class="keyword">var</span> right = [];</div><div class="line">    <span class="keyword">var</span> keyIndex = <span class="built_in">parseInt</span>(arr.length / <span class="number">2</span>);</div><div class="line">    <span class="keyword">var</span> key = arr[keyIndex];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(arr[i] &lt;= key)&#123;</div><div class="line">            left.push(arr[i]);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(arr[i] &gt; key)&#123;</div><div class="line">            right.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> left.concat(right);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> left = [];</div><div class="line">    <span class="keyword">var</span> right = [];</div><div class="line">    <span class="keyword">var</span> keyIndex = <span class="built_in">parseInt</span>(arr.length / <span class="number">2</span>);</div><div class="line">    <span class="keyword">var</span> key = arr[keyIndex];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(arr[i] &lt;= key)&#123;</div><div class="line">            left.push(arr[i]);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(arr[i] &gt; key)&#123;</div><div class="line">            right.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> left.concat(right);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -525,7 +525,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍："><span class="nav-number">1.</span> <span class="nav-text">介绍：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤："><span class="nav-number">2.</span> <span class="nav-text">实现步骤：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码："><span class="nav-number">3.</span> <span class="nav-text">代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">2.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
         </section>
