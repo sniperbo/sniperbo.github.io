@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff2b;
+  background: #400b1a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2294,6 +2294,10 @@ hr {
 }
 .posts-expand .post {
   margin-top: 120px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 0 1px rgba(0,0,0,0.04) inset;
 }
 .posts-expand .post:first-child {
   margin-top: 0;
