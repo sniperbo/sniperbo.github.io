@@ -806,7 +806,7 @@ pre .javascript .function {
 .pagination .page-number.current {
   color: #fff;
   background: #ccc;
-  border-top-color: #ccc;
+  border-color: #ccc;
 }
 @media (max-width: 767px) {
   .pagination {
