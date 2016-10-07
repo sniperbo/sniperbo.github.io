@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,前端,算法," />
+  <meta name="keywords" content="JavaScript,前端," />
 
 
 
@@ -84,19 +84,28 @@
 
 
 
-<meta name="description" content="介绍
-快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。">
+<meta name="description" content="我们知道在javascript中小数运算是会出现错误的，例如：
+1console.log(0.1 + 0.2);
+的计算结果并不是0.3，而是0.30000000000000004。
+这就很奇怪了，先从javascript中的number类型说起吧。
+在javascript中number类型就是是浮点数，而在javascript中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript算法之快速排序">
-<meta property="og:url" content="http://yoursite.com/2016/10/05/JavaScript算法之快速排序/index.html">
+<meta property="og:title" content="JavaScript中的小数计算">
+<meta property="og:url" content="http://yoursite.com/2016/10/07/JavaScript中的小数计算/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="介绍
-快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。">
-<meta property="og:updated_time" content="2016-10-06T03:48:14.875Z">
+<meta property="og:description" content="我们知道在javascript中小数运算是会出现错误的，例如：
+1console.log(0.1 + 0.2);
+的计算结果并不是0.3，而是0.30000000000000004。
+这就很奇怪了，先从javascript中的number类型说起吧。
+在javascript中number类型就是是浮点数，而在javascript中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二">
+<meta property="og:updated_time" content="2016-10-07T09:11:51.986Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript算法之快速排序">
-<meta name="twitter:description" content="介绍
-快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。">
+<meta name="twitter:title" content="JavaScript中的小数计算">
+<meta name="twitter:description" content="我们知道在javascript中小数运算是会出现错误的，例如：
+1console.log(0.1 + 0.2);
+的计算结果并不是0.3，而是0.30000000000000004。
+这就很奇怪了，先从javascript中的number类型说起吧。
+在javascript中number类型就是是浮点数，而在javascript中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二">
 
 
 
@@ -117,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/05/JavaScript算法之快速排序/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/07/JavaScript中的小数计算/"/>
 
-  <title> JavaScript算法之快速排序 | 赵的拇指 </title>
+  <title> JavaScript中的小数计算 | 赵的拇指 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +268,7 @@
             
             
               
-                JavaScript算法之快速排序
+                JavaScript中的小数计算
               
             
           </h1>
@@ -271,8 +280,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-05T21:27:17+08:00" content="2016-10-05">
-              2016-10-05
+            <time itemprop="dateCreated" datetime="2016-10-07T16:17:59+08:00" content="2016-10-07">
+              2016-10-07
             </time>
           </span>
 
@@ -301,8 +310,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/05/JavaScript算法之快速排序/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/05/JavaScript算法之快速排序/" itemprop="commentsCount"></span>
+                <a href="/2016/10/07/JavaScript中的小数计算/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/JavaScript中的小数计算/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,19 +334,15 @@
       
 
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote>
-<p>快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
-</blockquote>
-<a id="more"></a>
-<p>以上摘自<a href="http://baike.baidu.com/link?url=VUy9SLKbR6ELnmQo2CDRBN0elaF0MTtmEjA1l7blXyVXeclRrDXa3jTJVZP48CQulI5pvI0akmXFrvGJgovGM9p2uqeLq53sh6VxLaIq_1XhbKbL_G0OmZ0sUfTrwBD25gxgY1PDUUTnTlJJaHsW_nHw_gsP4-R04QFgZQpvSATyN35hEYHYfBRWl8KLhi87yGNwodIbC-jvvGsqRBTtIWWL9Gceyd7ZMvL_hQe4RNk99vii_5ZCx_05fYpMkYJ1" target="_blank" rel="external">百度百科</a></p>
-<p>稳定性 <em>不稳定</em><br>时间复杂度 <em>最好</em> <code>O(nlogn)</code><br>时间复杂度 <em>最差</em> <code>O(n^2)</code></p>
-<p>快速排序是对冒泡排序的一种本质改进。它的基本思想是通过一趟扫描后，使得排序序列的长度能大幅度地减少。在冒泡排序中，一次扫描只能确保最大数值的数移到正确位置，而待排序序列的长度可能只减少1。快速排序通过一趟扫描，就能确保某个数（以它为基准点吧）的左边各数都比它小，右边各数都比它大。然后又用同样的方法处理它左右两边的数，直到基准点的左右只有一个元素为止。</p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
-<li>在数据集之中，选择一个元素作为”基准”</li>
-<li>所有小于”基准”的元素，都移到”基准”的左边；所有大于”基准”的元素，都移到”基准”的右边。</li>
-<li>对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。</li>
-</ol>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> left = [];</div><div class="line">    <span class="keyword">var</span> right = [];</div><div class="line">    <span class="keyword">var</span> keyIndex = <span class="built_in">parseInt</span>(arr.length / <span class="number">2</span>);</div><div class="line">    <span class="keyword">var</span> key = arr[keyIndex];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(arr[i] &lt;= key)&#123;</div><div class="line">            left.push(arr[i]);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(arr[i] &gt; key)&#123;</div><div class="line">            right.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> left.concat(right);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>我们知道在javascript中小数运算是会出现错误的，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>);</div></pre></td></tr></table></figure>
+<p>的计算结果并不是<code>0.3</code>，而是<code>0.30000000000000004</code>。</p>
+<p>这就很奇怪了，先从<code>javascript</code>中的<code>number</code>类型说起吧。</p>
+<p>在<code>javascript</code>中<code>number</code>类型就是是浮点数，而在<code>javascript</code>中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二进制书可以准确的表示<code>1/2</code>、<code>1/4</code>、<code>1/8</code>这类的小数，而表示<code>0.1</code>这样的小数就会出现问题。<br>使用二进制表示<code>0.1</code>会被表示成<code>0.0001 1001 1001 1001…</code>,其中<code>1001</code>会无限循环。<br>使用二进制表示<code>0.2</code>会被表示成<code>0.0011 0011 0011 0011…</code>,其中<code>0011</code>会无限循环。<br>在<code>javascript</code>中双精度浮点数的小数部分最多支持 52 位，并且计算会先将数字转换成二进制计算出结果，再转换成十进制数。<br>所以<code>0.1</code>和<code>0.2</code>两者相加之后得到<code>0.0100110011001100110011001100110011001100...</code>因浮点数小数位的限制而截断的二进制数字，这时候，再把它转换为十进制，就成了 <code>0.30000000000000004</code>。</p>
+<p>解决方法：将小数转换成整型数再计算，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> temp1, temp2, multiple;</div><div class="line">	<span class="comment">//分别获取两个小数的小数长度</span></div><div class="line">	temp1 = (num1.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line">	temp2 = (num2.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line"></div><div class="line">	<span class="comment">//通过比较两个数字的小数位获取大的，计算出需要扩大的倍数</span></div><div class="line">	multiple = <span class="built_in">Math</span>.pow(<span class="number">10</span>, <span class="built_in">Math</span>.max(temp1, temp1));</div><div class="line">    <span class="comment">//计算结果</span></div><div class="line">	<span class="keyword">return</span> (num1 * multiple + num2 * multiple) / multiple;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">0.1</span>, <span class="number">0.2</span>)) <span class="comment">//0.3</span></div></pre></td></tr></table></figure>
+<p>其余的减法和乘除也是一样。</p>
+
       
     </div>
 
@@ -363,8 +368,6 @@
           
             <a href="/tags/前端/" rel="tag">#前端</a>
           
-            <a href="/tags/算法/" rel="tag">#算法</a>
-          
         </div>
       
 
@@ -372,17 +375,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/22/项目截图/" rel="next" title="经典阅读网项目截图">
-                <i class="fa fa-chevron-left"></i> 经典阅读网项目截图
+              <a href="/2016/10/06/IE浏览器获取json的问题/" rel="next" title="IE浏览器获取json的问题">
+                <i class="fa fa-chevron-left"></i> IE浏览器获取json的问题
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/06/css中的px、em、rem/" rel="prev" title="css中的px、em、rem">
-                css中的px、em、rem <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -408,8 +407,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/05/JavaScript算法之快速排序/"
-           data-title="JavaScript算法之快速排序" data-url="http://yoursite.com/2016/10/05/JavaScript算法之快速排序/">
+      <div class="ds-thread" data-thread-key="2016/10/07/JavaScript中的小数计算/"
+           data-title="JavaScript中的小数计算" data-url="http://yoursite.com/2016/10/07/JavaScript中的小数计算/">
       </div>
     
   </div>
@@ -529,7 +528,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">2.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

@@ -258,6 +258,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/07/JavaScript中的小数计算/" itemprop="url">
+                  JavaScript中的小数计算
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-07T16:17:59+08:00" content="2016-10-07">
+              2016-10-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study-blog/" itemprop="url" rel="index">
+                    <span itemprop="name">study_blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/07/JavaScript中的小数计算/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/JavaScript中的小数计算/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>我们知道在javascript中小数运算是会出现错误的，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>);</div></pre></td></tr></table></figure>
+<p>的计算结果并不是<code>0.3</code>，而是<code>0.30000000000000004</code>。</p>
+<p>这就很奇怪了，先从<code>javascript</code>中的<code>number</code>类型说起吧。</p>
+<p>在<code>javascript</code>中<code>number</code>类型就是是浮点数，而在<code>javascript</code>中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二进制书可以准确的表示<code>1/2</code>、<code>1/4</code>、<code>1/8</code>这类的小数，而表示<code>0.1</code>这样的小数就会出现问题。<br>使用二进制表示<code>0.1</code>会被表示成<code>0.0001 1001 1001 1001…</code>,其中<code>1001</code>会无限循环。<br>使用二进制表示<code>0.2</code>会被表示成<code>0.0011 0011 0011 0011…</code>,其中<code>0011</code>会无限循环。<br>在<code>javascript</code>中双精度浮点数的小数部分最多支持 52 位，并且计算会先将数字转换成二进制计算出结果，再转换成十进制数。<br>所以<code>0.1</code>和<code>0.2</code>两者相加之后得到<code>0.0100110011001100110011001100110011001100...</code>因浮点数小数位的限制而截断的二进制数字，这时候，再把它转换为十进制，就成了 <code>0.30000000000000004</code>。</p>
+<p>解决方法：将小数转换成整型数再计算，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> temp1, temp2, multiple;</div><div class="line">	<span class="comment">//分别获取两个小数的小数长度</span></div><div class="line">	temp1 = (num1.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line">	temp2 = (num2.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line"></div><div class="line">	<span class="comment">//通过比较两个数字的小数位获取大的，计算出需要扩大的倍数</span></div><div class="line">	multiple = <span class="built_in">Math</span>.pow(<span class="number">10</span>, <span class="built_in">Math</span>.max(temp1, temp1));</div><div class="line">    <span class="comment">//计算结果</span></div><div class="line">	<span class="keyword">return</span> (num1 * multiple + num2 * multiple) / multiple;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">0.1</span>, <span class="number">0.2</span>)) <span class="comment">//0.3</span></div></pre></td></tr></table></figure>
+<p>其余的减法和乘除也是一样。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/06/IE浏览器获取json的问题/" itemprop="url">
                   IE浏览器获取json的问题
                 </a>
@@ -850,132 +977,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/07/gulp构建工具使用之安装/" itemprop="url">
-                  gulp构建工具使用之安装
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-07T15:22:36+08:00" content="2016-09-07">
-              2016-09-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/study-blog/" itemprop="url" rel="index">
-                    <span itemprop="name">study_blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/07/gulp构建工具使用之安装/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/07/gulp构建工具使用之安装/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ul>
-<li><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2></li>
-</ul>
-<p>打开<a href="https://nodejs.org/en/">node.js官网</a>,根据自己的系统下载安装对应的node版本。<br>安装完之后，分别输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ node -v</div><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
-<p>可以用来查看node与npm的版本<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/07/gulp构建工具使用之安装/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1021,7 +1022,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
