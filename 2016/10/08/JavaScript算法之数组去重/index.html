@@ -84,25 +84,16 @@
 
 
 
-<meta name="description" content="看面试题，偶然看到这个题目，然后想着写写代码实现一下。
-
-首先想到最简单的方法，就是遍历数组，然后去重，代码如下（不改变原数组）
-1234567891011121314151617function unique1(arr)&amp;#123;	let newArr = [];	const arrLen = arr.length;	for(let i = 0; i &amp;lt; arrLen; i++)&amp;#12">
+<meta name="description" content="看面试题，偶然看到这个题目，然后想着写写代码实现一下。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript算法之数组去重">
 <meta property="og:url" content="http://yoursite.com/2016/10/08/JavaScript算法之数组去重/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="看面试题，偶然看到这个题目，然后想着写写代码实现一下。
-
-首先想到最简单的方法，就是遍历数组，然后去重，代码如下（不改变原数组）
-1234567891011121314151617function unique1(arr)&amp;#123;	let newArr = [];	const arrLen = arr.length;	for(let i = 0; i &amp;lt; arrLen; i++)&amp;#12">
-<meta property="og:updated_time" content="2016-10-08T09:32:37.197Z">
+<meta property="og:description" content="看面试题，偶然看到这个题目，然后想着写写代码实现一下。">
+<meta property="og:updated_time" content="2016-10-08T09:34:00.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript算法之数组去重">
-<meta name="twitter:description" content="看面试题，偶然看到这个题目，然后想着写写代码实现一下。
-
-首先想到最简单的方法，就是遍历数组，然后去重，代码如下（不改变原数组）
-1234567891011121314151617function unique1(arr)&amp;#123;	let newArr = [];	const arrLen = arr.length;	for(let i = 0; i &amp;lt; arrLen; i++)&amp;#12">
+<meta name="twitter:description" content="看面试题，偶然看到这个题目，然后想着写写代码实现一下。">
 
 
 
@@ -332,6 +323,7 @@
 
       
         <p>看面试题，偶然看到这个题目，然后想着写写代码实现一下。</p>
+<a id="more"></a>
 <ol>
 <li><p>首先想到最简单的方法，就是遍历数组，然后去重，代码如下（不改变原数组）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique1</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">	<span class="keyword">let</span> newArr = [];</div><div class="line">	<span class="keyword">const</span> arrLen = arr.length;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arrLen; i++)&#123;</div><div class="line">		<span class="keyword">let</span> mark = <span class="literal">false</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j = i + <span class="number">1</span> ; j &lt; arrLen; j++)&#123;</div><div class="line">			<span class="keyword">if</span>(arr[i] === arr[j])&#123;</div><div class="line">				mark = <span class="literal">true</span>;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(!mark)&#123;</div><div class="line">			newArr.push(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
