@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,算法,前端,备忘," />
+  <meta name="keywords" content="JavaScript,前端,算法,备忘," />
 
 
 
@@ -88,8 +88,7 @@
 不能荒废了这博客，还是写点废话吧…
 最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。
 记录下来做备忘吧！！！
-不多说，直接上代码：
-123456789101112131415161718192021222324252627282930function pages(nowPage, totalPage)&amp;#123;	var str">
+不多说，直接上代码：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript算法之分页(备忘)">
 <meta property="og:url" content="http://yoursite.com/2016/11/19/JavaScript算法之分页-备忘/index.html">
@@ -98,17 +97,15 @@
 不能荒废了这博客，还是写点废话吧…
 最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。
 记录下来做备忘吧！！！
-不多说，直接上代码：
-123456789101112131415161718192021222324252627282930function pages(nowPage, totalPage)&amp;#123;	var str">
-<meta property="og:updated_time" content="2016-11-19T12:14:07.000Z">
+不多说，直接上代码：">
+<meta property="og:updated_time" content="2016-11-19T13:42:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript算法之分页(备忘)">
 <meta name="twitter:description" content="很久没写东西了，哎…
 不能荒废了这博客，还是写点废话吧…
 最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。
 记录下来做备忘吧！！！
-不多说，直接上代码：
-123456789101112131415161718192021222324252627282930function pages(nowPage, totalPage)&amp;#123;	var str">
+不多说，直接上代码：">
 
 
 
@@ -342,6 +339,7 @@
 <p>最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。</p>
 <p>记录下来做备忘吧！！！</p>
 <p>不多说，直接上代码：</p>
+<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">pages</span>(<span class="params">nowPage, totalPage</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> str = nowPage + <span class="string">''</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++) &#123;</div><div class="line">		<span class="keyword">if</span> (nowPage - i &gt; <span class="number">1</span>) &#123;</div><div class="line">			str = nowPage - i + <span class="string">' '</span> + str;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (nowPage + i &lt; totalPage) &#123;</div><div class="line">			str = str + <span class="string">' '</span> + (nowPage + i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage - <span class="number">4</span> &gt; <span class="number">1</span>) &#123;</div><div class="line">		str = <span class="string">'... '</span> + str;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage &gt; <span class="number">1</span>) &#123;</div><div class="line">		str = <span class="string">'first '</span> + <span class="string">'prev '</span> + <span class="number">1</span> + <span class="string">' '</span> + str;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage + <span class="number">4</span> &lt; totalPage) &#123;</div><div class="line">		str = str + <span class="string">' ...'</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage &lt; totalPage) &#123;</div><div class="line">		str = str + <span class="string">' '</span> + totalPage + <span class="string">' next'</span> + <span class="string">' last'</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> str.split(<span class="string">' '</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>以上这个代码最后会返回一个分页的数组，包含上一页，下一页，首页和尾页。</p>
 <p>返回值如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="string">'first'</span>, <span class="string">'prev'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'...'</span>, <span class="string">'10'</span>, <span class="string">'next'</span>, <span class="string">'last'</span> ]</div></pre></td></tr></table></figure></p>
@@ -371,9 +369,9 @@
           
             <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
-            <a href="/tags/算法/" rel="tag">#算法</a>
-          
             <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
             <a href="/tags/备忘/" rel="tag">#备忘</a>
           
