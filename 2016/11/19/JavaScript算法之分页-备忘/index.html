@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,前端," />
+  <meta name="keywords" content="JavaScript,算法,前端,备忘," />
 
 
 
@@ -84,22 +84,31 @@
 
 
 
-<meta name="description" content="我们知道在javascript中小数运算是会出现错误的，例如：
-1console.log(0.1 + 0.2);
-的计算结果并不是0.3，而是0.30000000000000004。">
+<meta name="description" content="很久没写东西了，哎…
+不能荒废了这博客，还是写点废话吧…
+最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。
+记录下来做备忘吧！！！
+不多说，直接上代码：
+123456789101112131415161718192021222324252627282930function pages(nowPage, totalPage)&amp;#123;	var str">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中的小数计算">
-<meta property="og:url" content="http://yoursite.com/2016/10/07/JavaScript中的小数计算/index.html">
+<meta property="og:title" content="JavaScript算法之分页(备忘)">
+<meta property="og:url" content="http://yoursite.com/2016/11/19/JavaScript算法之分页-备忘/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="我们知道在javascript中小数运算是会出现错误的，例如：
-1console.log(0.1 + 0.2);
-的计算结果并不是0.3，而是0.30000000000000004。">
-<meta property="og:updated_time" content="2016-10-08T09:27:05.006Z">
+<meta property="og:description" content="很久没写东西了，哎…
+不能荒废了这博客，还是写点废话吧…
+最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。
+记录下来做备忘吧！！！
+不多说，直接上代码：
+123456789101112131415161718192021222324252627282930function pages(nowPage, totalPage)&amp;#123;	var str">
+<meta property="og:updated_time" content="2016-11-19T12:14:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中的小数计算">
-<meta name="twitter:description" content="我们知道在javascript中小数运算是会出现错误的，例如：
-1console.log(0.1 + 0.2);
-的计算结果并不是0.3，而是0.30000000000000004。">
+<meta name="twitter:title" content="JavaScript算法之分页(备忘)">
+<meta name="twitter:description" content="很久没写东西了，哎…
+不能荒废了这博客，还是写点废话吧…
+最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。
+记录下来做备忘吧！！！
+不多说，直接上代码：
+123456789101112131415161718192021222324252627282930function pages(nowPage, totalPage)&amp;#123;	var str">
 
 
 
@@ -120,9 +129,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/07/JavaScript中的小数计算/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/19/JavaScript算法之分页-备忘/"/>
 
-  <title> JavaScript中的小数计算 | 赵的拇指 </title>
+  <title> JavaScript算法之分页(备忘) | 赵的拇指 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +271,7 @@
             
             
               
-                JavaScript中的小数计算
+                JavaScript算法之分页(备忘)
               
             
           </h1>
@@ -274,8 +283,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-07T16:17:59+08:00" content="2016-10-07">
-              2016-10-07
+            <time itemprop="dateCreated" datetime="2016-11-19T20:05:54+08:00" content="2016-11-19">
+              2016-11-19
             </time>
           </span>
 
@@ -304,8 +313,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/07/JavaScript中的小数计算/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/JavaScript中的小数计算/" itemprop="commentsCount"></span>
+                <a href="/2016/11/19/JavaScript算法之分页-备忘/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/19/JavaScript算法之分页-备忘/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,15 +337,16 @@
       
 
       
-        <p>我们知道在javascript中小数运算是会出现错误的，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>);</div></pre></td></tr></table></figure>
-<p>的计算结果并不是<code>0.3</code>，而是<code>0.30000000000000004</code>。</p>
-<a id="more"></a>
-<p>这就很奇怪了，先从<code>javascript</code>中的<code>number</code>类型说起吧。</p>
-<p>在<code>javascript</code>中<code>number</code>类型就是是浮点数，而在<code>javascript</code>中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二进制书可以准确的表示<code>1/2</code>、<code>1/4</code>、<code>1/8</code>这类的小数，而表示<code>0.1</code>这样的小数就会出现问题。<br>使用二进制表示<code>0.1</code>会被表示成<code>0.0001 1001 1001 1001…</code>,其中<code>1001</code>会无限循环。<br>使用二进制表示<code>0.2</code>会被表示成<code>0.0011 0011 0011 0011…</code>,其中<code>0011</code>会无限循环。<br>在<code>javascript</code>中双精度浮点数的小数部分最多支持 52 位，并且计算会先将数字转换成二进制计算出结果，再转换成十进制数。<br>所以<code>0.1</code>和<code>0.2</code>两者相加之后得到<code>0.0100110011001100110011001100110011001100...</code>因浮点数小数位的限制而截断的二进制数字，这时候，再把它转换为十进制，就成了 <code>0.30000000000000004</code>。</p>
-<p>解决方法：将小数转换成整型数再计算，代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> temp1, temp2, multiple;</div><div class="line">	<span class="comment">//分别获取两个小数的小数长度</span></div><div class="line">	temp1 = (num1.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line">	temp2 = (num2.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line"></div><div class="line">	<span class="comment">//通过比较两个数字的小数位获取大的，计算出需要扩大的倍数</span></div><div class="line">	multiple = <span class="built_in">Math</span>.pow(<span class="number">10</span>, <span class="built_in">Math</span>.max(temp1, temp1));</div><div class="line"></div><div class="line">	<span class="comment">//计算结果</span></div><div class="line">	<span class="keyword">return</span> (num1 * multiple + num2 * multiple) / multiple;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">0.1</span>, <span class="number">0.2</span>)) <span class="comment">//0.3</span></div></pre></td></tr></table></figure>
-<p>其余的减法和乘除也是一样。</p>
+        <p>很久没写东西了，哎…</p>
+<p>不能荒废了这博客，还是写点废话吧…</p>
+<p>最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。</p>
+<p>记录下来做备忘吧！！！</p>
+<p>不多说，直接上代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">pages</span>(<span class="params">nowPage, totalPage</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> str = nowPage + <span class="string">''</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++) &#123;</div><div class="line">		<span class="keyword">if</span> (nowPage - i &gt; <span class="number">1</span>) &#123;</div><div class="line">			str = nowPage - i + <span class="string">' '</span> + str;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (nowPage + i &lt; totalPage) &#123;</div><div class="line">			str = str + <span class="string">' '</span> + (nowPage + i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage - <span class="number">4</span> &gt; <span class="number">1</span>) &#123;</div><div class="line">		str = <span class="string">'... '</span> + str;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage &gt; <span class="number">1</span>) &#123;</div><div class="line">		str = <span class="string">'first '</span> + <span class="string">'prev '</span> + <span class="number">1</span> + <span class="string">' '</span> + str;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage + <span class="number">4</span> &lt; totalPage) &#123;</div><div class="line">		str = str + <span class="string">' ...'</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (nowPage &lt; totalPage) &#123;</div><div class="line">		str = str + <span class="string">' '</span> + totalPage + <span class="string">' next'</span> + <span class="string">' last'</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> str.split(<span class="string">' '</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上这个代码最后会返回一个分页的数组，包含上一页，下一页，首页和尾页。</p>
+<p>返回值如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ <span class="string">'first'</span>, <span class="string">'prev'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'...'</span>, <span class="string">'10'</span>, <span class="string">'next'</span>, <span class="string">'last'</span> ]</div></pre></td></tr></table></figure></p>
+<p>可以取到这些返回值，然后做一些判断渲染到Html页面中…</p>
+<p>实习快一个月了，过几天写一篇实习总结，需要好好批判自己一番了…</p>
 
       
     </div>
@@ -361,7 +371,11 @@
           
             <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
+            <a href="/tags/算法/" rel="tag">#算法</a>
+          
             <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/备忘/" rel="tag">#备忘</a>
           
         </div>
       
@@ -370,17 +384,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/06/IE浏览器获取json的问题/" rel="next" title="IE浏览器获取json的问题">
-                <i class="fa fa-chevron-left"></i> IE浏览器获取json的问题
+              <a href="/2016/10/08/关于BFC的一些姿势/" rel="next" title="关于BFC的一些姿势">
+                <i class="fa fa-chevron-left"></i> 关于BFC的一些姿势
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/08/JavaScript算法之数组去重/" rel="prev" title="JavaScript算法之数组去重">
-                JavaScript算法之数组去重 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +416,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/07/JavaScript中的小数计算/"
-           data-title="JavaScript中的小数计算" data-url="http://yoursite.com/2016/10/07/JavaScript中的小数计算/">
+      <div class="ds-thread" data-thread-key="2016/11/19/JavaScript算法之分页-备忘/"
+           data-title="JavaScript算法之分页(备忘)" data-url="http://yoursite.com/2016/11/19/JavaScript算法之分页-备忘/">
       </div>
     
   </div>
