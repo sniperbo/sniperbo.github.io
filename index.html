@@ -258,6 +258,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/11/git使用笔记/" itemprop="url">
+                  git使用笔记[转]
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-11T21:49:30+08:00" content="2016-12-11">
+              2016-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study-blog/" itemprop="url" rel="index">
+                    <span itemprop="name">study_blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/11/git使用笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/11/git使用笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>申明：本文非原创，转自颜海镜的博客，<a href="http://yanhaijing.com/git/2014/11/01/my-git-note/" target="_blank" rel="external">原文地址</a></strong></p>
+<h2 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git init <span class="comment">#初始化</span></div><div class="line">git status <span class="comment">#获取状态</span></div><div class="line">git add [file1] [file2] ... <span class="comment">#.或*代表全部添加</span></div><div class="line">git commit -m <span class="string">"message"</span> <span class="comment">#此处注意乱码</span></div><div class="line">git remote add origin  <span class="comment">#添加源</span></div><div class="line">git push -u origin master <span class="comment">#push同时设置默认跟踪分支</span></div></pre></td></tr></table></figure>
+<h2 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git <span class="built_in">clone</span> git://github.com/yanhaijing/data.js.git	</div><div class="line">git <span class="built_in">clone</span> git://github.com/schacon/grit.git mypro <span class="comment">#克隆到自定义文件夹</span></div></pre></td></tr></table></figure>
+<h2 id="本地"><a href="#本地" class="headerlink" title="本地"></a>本地</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git add * <span class="comment"># 跟踪新文件</span></div><div class="line">git add -u [path] <span class="comment"># 添加[指定路径下]已跟踪文件</span></div><div class="line"></div><div class="line">rm *&amp;git rm * <span class="comment"># 移除文件</span></div><div class="line">git rm <span class="_">-f</span> * <span class="comment"># 移除文件</span></div><div class="line">git rm --cached * <span class="comment"># 停止追踪指定文件，但该文件会保留在工作区</span></div><div class="line">git mv file_from file_to <span class="comment"># 重命名跟踪文件</span></div><div class="line"></div><div class="line">git <span class="built_in">log</span> <span class="comment"># 查看提交记录</span></div><div class="line"></div><div class="line">git commit <span class="comment"># 提交更新	</span></div><div class="line">git commit [file1] [file2] ... <span class="comment"># 提交指定文件	</span></div><div class="line">git commit -m <span class="string">'message'</span></div><div class="line">git commit <span class="_">-a</span> <span class="comment"># 跳过使用暂存区域，把所有已经跟踪过的文件暂存起来一并提交</span></div><div class="line">git commit --amend <span class="comment">#修改最后一次提交</span></div><div class="line">git commit -v <span class="comment"># 提交时显示所有diff信息</span></div><div class="line"></div><div class="line">git reset HEAD * <span class="comment">#取消已经暂存的文件</span></div><div class="line">git reset --mixed HEAD * <span class="comment">#同上</span></div><div class="line">git reset --soft HEAD * <span class="comment">#重置到指定状态，不会修改索引区和工作树</span></div><div class="line">git reset --hard HEAD * <span class="comment">#重置到指定状态，会修改索引区和工作树</span></div><div class="line">git reset -- files <span class="comment">#重置index区文件</span></div><div class="line"></div><div class="line">git revert HEAD <span class="comment">#撤销前一次操作</span></div><div class="line">git revert HEAD~ <span class="comment">#撤销前前一次操作</span></div><div class="line">git revert commit <span class="comment">## 撤销指定操作</span></div><div class="line"></div><div class="line">git checkout -- file <span class="comment">#取消对文件的修改（从暂存区——覆盖worktree file）</span></div><div class="line">git checkout branch|tag|commit -- file_name <span class="comment">#从仓库取出file覆盖当前分支</span></div><div class="line">git checkout -- . <span class="comment">#从暂存区取出文件覆盖工作区</span></div><div class="line"></div><div class="line">git diff file <span class="comment">#查看指定文件的差异</span></div><div class="line">git diff --stat <span class="comment">#查看简单的diff结果</span></div><div class="line">git diff <span class="comment">#比较Worktree和Index之间的差异</span></div><div class="line">git diff --cached <span class="comment">#比较Index和HEAD之间的差异</span></div><div class="line">git diff HEAD <span class="comment">#比较Worktree和HEAD之间的差异</span></div><div class="line">git diff branch <span class="comment">#比较Worktree和branch之间的差异</span></div><div class="line">git diff branch1 branch2 <span class="comment">#比较两次分支之间的差异</span></div><div class="line">git diff commit commit <span class="comment">#比较两次提交之间的差异</span></div><div class="line"></div><div class="line"></div><div class="line">git <span class="built_in">log</span> <span class="comment">#查看最近的提交日志</span></div><div class="line">git <span class="built_in">log</span> --pretty=oneline <span class="comment">#单行显示提交日志</span></div><div class="line">git <span class="built_in">log</span> --graph <span class="comment"># 图形化显示</span></div><div class="line">git <span class="built_in">log</span> --abbrev-commit <span class="comment"># 显示log id的缩写</span></div><div class="line">git <span class="built_in">log</span> -num <span class="comment">#显示第几条log（倒数）</span></div><div class="line">git <span class="built_in">log</span> --stat <span class="comment"># 显示commit历史，以及每次commit发生变更的文件</span></div><div class="line">git <span class="built_in">log</span> --follow [file] <span class="comment"># 显示某个文件的版本历史，包括文件改名</span></div><div class="line">git <span class="built_in">log</span> -p [file] <span class="comment"># 显示指定文件相关的每一次diff</span></div><div class="line"></div><div class="line">git stash <span class="comment">#将工作区现场（已跟踪文件）储藏起来，等以后恢复后继续工作。</span></div><div class="line">git stash list <span class="comment">#查看保存的工作现场</span></div><div class="line">git stash apply <span class="comment">#恢复工作现场</span></div><div class="line">git stash drop <span class="comment">#删除stash内容</span></div><div class="line">git stash pop <span class="comment">#恢复的同时直接删除stash内容</span></div><div class="line">git stash apply stash@&#123;0&#125; <span class="comment">#恢复指定的工作现场，当你保存了不只一份工作现场时。</span></div></pre></td></tr></table></figure>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">git branch <span class="comment">#列出本地分支</span></div><div class="line">git branch -r <span class="comment">#列出远端分支</span></div><div class="line">git branch <span class="_">-a</span> <span class="comment">#列出所有分支</span></div><div class="line">git branch -v <span class="comment">#查看各个分支最后一个提交对象的信息</span></div><div class="line">git branch --merge <span class="comment">#查看已经合并到当前分支的分支</span></div><div class="line">git branch --no-merge <span class="comment">#查看为合并到当前分支的分支</span></div><div class="line">git branch <span class="built_in">test</span> <span class="comment">#新建test分支</span></div><div class="line">git branch branch [branch|commit|tag] <span class="comment">#从指定位置出新建分支</span></div><div class="line">git branch --track branch remote-branch <span class="comment">#新建一个分支，与指定的远程分支建立追踪关系</span></div><div class="line">git branch -m old new <span class="comment">#重命名分支</span></div><div class="line">git branch <span class="_">-d</span> <span class="built_in">test</span> <span class="comment">#删除test分支</span></div><div class="line">git branch -D <span class="built_in">test</span> <span class="comment">#强制删除test分支</span></div><div class="line">git branch --set-upstream dev origin/dev <span class="comment">#将本地dev分支与远程dev分支之间建立链接</span></div><div class="line"></div><div class="line">git checkout <span class="built_in">test</span> <span class="comment">#切换到test分支</span></div><div class="line">git checkout -b <span class="built_in">test</span> <span class="comment">#新建+切换到test分支</span></div><div class="line">git checkout -b <span class="built_in">test</span> dev <span class="comment">#基于dev新建test分支，并切换</span></div><div class="line"></div><div class="line">git merge <span class="built_in">test</span> <span class="comment">#将test分支合并到当前分支</span></div><div class="line">git merge --squash <span class="built_in">test</span> <span class="comment">#合并压缩，将test上的commit压缩为一条</span></div><div class="line"></div><div class="line">git cherry-pick commit <span class="comment">#拣选合并，将commit合并到当前分支</span></div><div class="line">git cherry-pick -n commit <span class="comment">#拣选多个提交，合并完后可以继续拣选下一个提交</span></div><div class="line"></div><div class="line">git rebase master <span class="comment">#将master分之上超前的提交，变基到当前分支</span></div><div class="line">git rebase --onto master 169a6 <span class="comment">#限制回滚范围，rebase当前分支从169a6以后的提交</span></div><div class="line">git rebase --interactive <span class="comment">#交互模式	</span></div><div class="line">git rebase --continue <span class="comment">#处理完冲突继续合并	</span></div><div class="line">git rebase --skip <span class="comment">#跳过	</span></div><div class="line">git rebase --abort <span class="comment">#取消合并</span></div></pre></td></tr></table></figure>
+<h2 id="远端"><a href="#远端" class="headerlink" title="远端"></a>远端</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git fetch origin remotebranch[:localbranch] <span class="comment">#从远端拉去分支[到本地指定分支]</span></div><div class="line"></div><div class="line">git merge origin/branch <span class="comment">#合并远端上指定分支</span></div><div class="line"></div><div class="line">git pull origin remotebranch:localbranch <span class="comment">#拉去远端分支到本地分支</span></div><div class="line"></div><div class="line">git push origin branch <span class="comment">#将当前分支，推送到远端上指定分支</span></div><div class="line">git push origin localbranch:remotebranch <span class="comment">#推送本地指定分支，到远端上指定分支</span></div><div class="line">git push origin :remotebranch <span class="comment"># 删除远端指定分支</span></div><div class="line">git push origin remotebranch --delete <span class="comment"># 删除远程分支</span></div><div class="line">git branch -dr branch <span class="comment"># 删除本地和远程分支</span></div><div class="line">git checkout -b [--track] <span class="built_in">test</span> origin/dev <span class="comment">#基于远端dev分支，新建本地test分支[同时设置跟踪]</span></div></pre></td></tr></table></figure>
+<h2 id="源"><a href="#源" class="headerlink" title="源"></a>源</h2><p>git是一个分布式代码管理工具，所以可以支持多个仓库，在git里，服务器上的仓库在本地称之为remote。个人开发时，多源用的可能不多，但多源其实非常有用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git remote add origin1 git@github.com:yanhaijing/data.js.git</div><div class="line"></div><div class="line">git remote <span class="comment">#显示全部源</span></div><div class="line">git remote -v <span class="comment">#显示全部源+详细信息</span></div><div class="line"></div><div class="line">git remote rename origin1 origin2 <span class="comment">#重命名</span></div><div class="line"></div><div class="line">git remote rm origin <span class="comment">#删除</span></div><div class="line"></div><div class="line">git remote show origin <span class="comment">#查看指定源的全部信息</span></div></pre></td></tr></table></figure>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git tag<span class="comment">#列出现有标签	</span></div><div class="line"></div><div class="line">git tag v0.1 [branch|commit] <span class="comment">#[从指定位置]新建标签</span></div><div class="line">git tag <span class="_">-a</span> v0.1 -m <span class="string">'my version 1.4'</span> <span class="comment">#新建带注释标签</span></div><div class="line"></div><div class="line">git checkout tagname <span class="comment">#切换到标签</span></div><div class="line"></div><div class="line">git push origin v1.5 <span class="comment">#推送分支到源上</span></div><div class="line">git push origin --tags <span class="comment">#一次性推送所有分支</span></div><div class="line"></div><div class="line">git tag <span class="_">-d</span> v0.1 <span class="comment">#删除标签</span></div><div class="line">git push origin :refs/tags/v0.1 <span class="comment">#删除远程标签</span></div></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">git <span class="built_in">help</span> * <span class="comment">#获取命令的帮助信息</span></div><div class="line">git status <span class="comment">#获取当前的状态，非常有用，因为git会提示接下来的能做的操作</span></div><div class="line"></div><div class="line">git reflog <span class="comment">#显示最近操作的commit id</span></div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/03/实习总结/" itemprop="url">
                   实习总结
                 </a>
@@ -855,130 +983,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/07/JavaScript中的小数计算/" itemprop="url">
-                  JavaScript中的小数计算
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-07T16:17:59+08:00" content="2016-10-07">
-              2016-10-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/study-blog/" itemprop="url" rel="index">
-                    <span itemprop="name">study_blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/07/JavaScript中的小数计算/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/JavaScript中的小数计算/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我们知道在javascript中小数运算是会出现错误的，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>);</div></pre></td></tr></table></figure>
-<p>的计算结果并不是<code>0.3</code>，而是<code>0.30000000000000004</code>。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/07/JavaScript中的小数计算/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1024,7 +1028,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1041,7 +1045,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
