@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/12/17/diary-%E5%9B%9E%E6%A0%A1%E8%80%83%E5%9B%9B%E7%BA%A7/</loc>
+    <lastmod>2016-12-17T14:41:45.115Z</lastmod>
+    <data>
+        <display>
+        <title>[diary]回校考四级</title>
+        <pubTime>2016-12-17T13:46:34.000Z</pubTime>
+        
+        <tag>日记</tag>
+         
+         
+           
+             
+              <breadCrumb title="life_blog" url="http://yoursite.com/categories/life-blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/12/11/git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2016-12-11T14:10:39.010Z</lastmod>
     <data>
@@ -53,11 +73,11 @@
         <title>JavaScript算法之二分查找法</title>
         <pubTime>2016-12-03T14:42:04.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>JavaScript</tag>
          
         <tag>算法</tag>
-         
-        <tag>前端</tag>
          
          
            
@@ -77,11 +97,11 @@
         <title>JavaScript算法之快速排序</title>
         <pubTime>2016-10-05T13:27:17.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>JavaScript</tag>
          
         <tag>算法</tag>
-         
-        <tag>前端</tag>
          
          
            
@@ -101,11 +121,11 @@
         <title>JavaScript算法之分页(备忘)</title>
         <pubTime>2016-11-19T12:05:54.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>JavaScript</tag>
          
         <tag>算法</tag>
-         
-        <tag>前端</tag>
          
         <tag>备忘</tag>
          
@@ -150,11 +170,11 @@
         <title>JavaScript算法之数组去重</title>
         <pubTime>2016-10-08T08:39:49.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>JavaScript</tag>
          
         <tag>算法</tag>
-         
-        <tag>前端</tag>
          
          
            
@@ -174,9 +194,9 @@
         <title>JavaScript中的小数计算</title>
         <pubTime>2016-10-07T08:17:59.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>前端</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
@@ -218,11 +238,11 @@
         <title>IE浏览器获取json的问题</title>
         <pubTime>2016-10-06T05:25:01.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>ie</tag>
          
         <tag>json</tag>
+         
+        <tag>前端</tag>
          
          
            

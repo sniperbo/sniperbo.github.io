@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,JavaScript," />
+  <meta name="keywords" content="日记," />
 
 
 
@@ -84,22 +84,19 @@
 
 
 
-<meta name="description" content="我们知道在javascript中小数运算是会出现错误的，例如：
-1console.log(0.1 + 0.2);
-的计算结果并不是0.3，而是0.30000000000000004。">
+<meta name="description" content="从杭州到苏州再到学校。
+漫漫人生路，总有些路是要自己一个人走下去…">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中的小数计算">
-<meta property="og:url" content="http://yoursite.com/2016/10/07/JavaScript中的小数计算/index.html">
+<meta property="og:title" content="[diary]回校考四级">
+<meta property="og:url" content="http://yoursite.com/2016/12/17/diary-回校考四级/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="我们知道在javascript中小数运算是会出现错误的，例如：
-1console.log(0.1 + 0.2);
-的计算结果并不是0.3，而是0.30000000000000004。">
-<meta property="og:updated_time" content="2016-10-08T09:27:05.006Z">
+<meta property="og:description" content="从杭州到苏州再到学校。
+漫漫人生路，总有些路是要自己一个人走下去…">
+<meta property="og:updated_time" content="2016-12-17T14:41:45.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中的小数计算">
-<meta name="twitter:description" content="我们知道在javascript中小数运算是会出现错误的，例如：
-1console.log(0.1 + 0.2);
-的计算结果并不是0.3，而是0.30000000000000004。">
+<meta name="twitter:title" content="[diary]回校考四级">
+<meta name="twitter:description" content="从杭州到苏州再到学校。
+漫漫人生路，总有些路是要自己一个人走下去…">
 
 
 
@@ -120,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/07/JavaScript中的小数计算/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/17/diary-回校考四级/"/>
 
-  <title> JavaScript中的小数计算 | 赵的拇指 </title>
+  <title> [diary]回校考四级 | 赵的拇指 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +259,7 @@
             
             
               
-                JavaScript中的小数计算
+                [diary]回校考四级
               
             
           </h1>
@@ -274,8 +271,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-07T16:17:59+08:00" content="2016-10-07">
-              2016-10-07
+            <time itemprop="dateCreated" datetime="2016-12-17T21:46:34+08:00" content="2016-12-17">
+              2016-12-17
             </time>
           </span>
 
@@ -288,8 +285,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/study-blog/" itemprop="url" rel="index">
-                    <span itemprop="name">study_blog</span>
+                  <a href="/categories/life-blog/" itemprop="url" rel="index">
+                    <span itemprop="name">life_blog</span>
                   </a>
                 </span>
 
@@ -304,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/07/JavaScript中的小数计算/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/07/JavaScript中的小数计算/" itemprop="commentsCount"></span>
+                <a href="/2016/12/17/diary-回校考四级/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/17/diary-回校考四级/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,15 +325,30 @@
       
 
       
-        <p>我们知道在javascript中小数运算是会出现错误的，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">0.1</span> + <span class="number">0.2</span>);</div></pre></td></tr></table></figure>
-<p>的计算结果并不是<code>0.3</code>，而是<code>0.30000000000000004</code>。</p>
+        <p>从杭州到苏州再到学校。</p>
+<p>漫漫人生路，总有些路是要自己一个人走下去…</p>
 <a id="more"></a>
-<p>这就很奇怪了，先从<code>javascript</code>中的<code>number</code>类型说起吧。</p>
-<p>在<code>javascript</code>中<code>number</code>类型就是是浮点数，而在<code>javascript</code>中浮点数是IEEE-754 格式规定的，也就是通过二进制数表示的。用二进制书可以准确的表示<code>1/2</code>、<code>1/4</code>、<code>1/8</code>这类的小数，而表示<code>0.1</code>这样的小数就会出现问题。<br>使用二进制表示<code>0.1</code>会被表示成<code>0.0001 1001 1001 1001…</code>,其中<code>1001</code>会无限循环。<br>使用二进制表示<code>0.2</code>会被表示成<code>0.0011 0011 0011 0011…</code>,其中<code>0011</code>会无限循环。<br>在<code>javascript</code>中双精度浮点数的小数部分最多支持 52 位，并且计算会先将数字转换成二进制计算出结果，再转换成十进制数。<br>所以<code>0.1</code>和<code>0.2</code>两者相加之后得到<code>0.0100110011001100110011001100110011001100...</code>因浮点数小数位的限制而截断的二进制数字，这时候，再把它转换为十进制，就成了 <code>0.30000000000000004</code>。</p>
-<p>解决方法：将小数转换成整型数再计算，代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>) </span>&#123;</div><div class="line">	<span class="keyword">let</span> temp1, temp2, multiple;</div><div class="line">	<span class="comment">//分别获取两个小数的小数长度</span></div><div class="line">	temp1 = (num1.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line">	temp2 = (num2.toString()).split(<span class="string">'.'</span>)[<span class="number">1</span>].length;</div><div class="line"></div><div class="line">	<span class="comment">//通过比较两个数字的小数位获取大的，计算出需要扩大的倍数</span></div><div class="line">	multiple = <span class="built_in">Math</span>.pow(<span class="number">10</span>, <span class="built_in">Math</span>.max(temp1, temp1));</div><div class="line"></div><div class="line">	<span class="comment">//计算结果</span></div><div class="line">	<span class="keyword">return</span> (num1 * multiple + num2 * multiple) / multiple;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(add(<span class="number">0.1</span>, <span class="number">0.2</span>)) <span class="comment">//0.3</span></div></pre></td></tr></table></figure>
-<p>其余的减法和乘除也是一样。</p>
+<p>大学第四年，四级考的第七次…</p>
+<p>本来是决定不会来考试的，然而最后还是决定回来了，有些事就算知道没有结果，但如果试都不试那就没有一点机会了，其实还有一点就是想和同学聚聚了。</p>
+<p>昨天下午再客户的公司接受客户的“摧残”，一直待到下午五点五十接近六点，本来是打算到杭州中心站坐六点半的汽车回学校的，然后算了下时间看来不及了，就坐公交去杭州东站。<br>在公交上看有八点的动车到苏州，12306客户端显示是有票的但是买不了，然后以为是客户端出问题了，心想到了车站再买票没问题的。然后到了车站发现是真没票了，咨询工作人员说是有延迟，这延迟让我真心无语。</p>
+<p>无奈买了八点半的火车票，就是那种绿皮火车，还是站票…</p>
+<p>在车站卫生间洗了把脸，买了瓶水准备检票上车（<em>这之前是动了歪心思的,想直接套票上八点的那辆动车，后来想想还是做个遵纪守法的好公民，然后就算了</em>）。检了票被乘务员告知可以去餐车，餐车有座，呵呵，确实有座位，不过是要消费的，一杯不知名的茶水￥20，一份渣到爆的快餐￥35，只有消费这么多才能让我坐到苏州。虽然这么的坑，但是那个时候觉得很困想坐着睡会就花了这钱。上了餐车，餐车里都是和我一样没买到票的人，乘务员过来挨个收钱，很多人被这超高的价格吓尿，有些人就和乘务员耍赖什么的，不过最后还是服从了。<br>我没“反抗”，直接交了钱，过会送来了一杯热水告知我饭在十点会上，我喝了一口就趴在那儿睡了。</p>
+<p>迷迷糊糊睡了差不多两个小时，车已经快开到了上海，醒来之后觉得很难受，车里面开了空调，让人很热，唔燥，就是那种干热不流汗，像被火在烤。</p>
+<p>列车到了上海，停了很久，餐车有人下车有人上车，乘务员又开始收钱，我继续燥热…</p>
+<p>差不多十一点了，列车启动了，然后乘务员也开始上那份35一份的快餐，不想吐槽，但还是吃光了，毕竟这么多钱…</p>
+<p>列车在开动，我却怎么也睡不着了，然后就到了列车的保留节目，推销产品，这次我遇到的是卖奶片和酒。说实话，我就一个字“服”，这推销员在这工作，我感觉真的是屈才，外面有广阔的天地等待着他。</p>
+<p>差不多十二点半，列车到站了，我下车了，一走出出口，就被两个大妈围住，一个打的一个住宿，我稍微问了一下就走了，我就往外走，那时候我是真不想住宿了就想找个肯德基啊网吧什么的待一下然后早上坐车回学校。</p>
+<p>那个住宿的大妈紧跟着我，我说不要她偏不信，我开始还告诉她不需要，然后就不理她头也不回的往外走，走到外面看见一个厕所就进去上了个厕所洗了把脸…</p>
+<p>出来之后发现大妈还在那，跟我喋喋不休，把价格降到30，算了算了，我答应了，然后乘她的电动车去住宿，到了那心凉了一半，这环境还不如网吧呢。算了，既来之则安之，穿着衣服睡到早上五点，就起来然后走到车站坐汽车回学校。</p>
+<p>坐在车就睡觉，一直到站，然后做了4路车回到学校，时间是七点，然后匆匆回到宿舍稍微收拾了一下，刷了个牙洗了个头，然后就下来了，到食堂吃了碗面好便宜…</p>
+<p>然后去考试，考试过程就是全程懵逼…</p>
+<p>下午在宿舍改了两个bug，然后看电视剧，这样的生活好爽，还是做一个学生爽啊…</p>
+<p>晚上叫上室友和一个基友一起去吃饭，五个人吃饭（除了我其他四个人都考研，就我这个不求上进的孩纸啊），感觉很棒。哎，匆匆的大学四年就快要结束了，以后这样的机会恐怕是难得了。</p>
+<p>吃完回到宿舍其他三个人去复习了，然后基友在宿舍和我聊了很久，他考研，最近感觉有压力，来自父母的压力，然后还有老是胡思乱想，状态不太对。我劝了他许多，他说我挺好的，知道自己要做什么喜欢什么，其实我自己也很迷茫。</p>
+<p>然后，又改了个bug，然后我爸给我打电话了，聊了些日常，哎，感觉自己压力还是蛮大的，不过我爸都这么辛苦，我凭什么安逸…</p>
+<p>现在是晚上十点钟，我写下了这边流水账，不为什么，就是想记录一下，希望以后可以继续记录下去。</p>
+<p>漫漫人生路，总有些路是要自己一个人走下去…</p>
+<p>加油，努力！！！</p>
 
       
     </div>
@@ -359,9 +371,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
-          
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+            <a href="/tags/日记/" rel="tag">#日记</a>
           
         </div>
       
@@ -370,17 +380,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/06/IE浏览器获取json的问题/" rel="next" title="IE浏览器获取json的问题">
-                <i class="fa fa-chevron-left"></i> IE浏览器获取json的问题
+              <a href="/2016/12/11/git使用笔记/" rel="next" title="git使用笔记[转]">
+                <i class="fa fa-chevron-left"></i> git使用笔记[转]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/08/JavaScript算法之数组去重/" rel="prev" title="JavaScript算法之数组去重">
-                JavaScript算法之数组去重 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,8 +412,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/07/JavaScript中的小数计算/"
-           data-title="JavaScript中的小数计算" data-url="http://yoursite.com/2016/10/07/JavaScript中的小数计算/">
+      <div class="ds-thread" data-thread-key="2016/12/17/diary-回校考四级/"
+           data-title="[diary]回校考四级" data-url="http://yoursite.com/2016/12/17/diary-回校考四级/">
       </div>
     
   </div>
