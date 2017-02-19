@@ -327,24 +327,12 @@
 
       
         
-          
-            <p>前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：</p>
-<ol>
-<li>视频<br>Android版的视频播放必须全屏，没有办法自定义video的width和height，而且在Android版中视频的层级是最高的，没有办法覆盖，滚你z-index设成多少都没用。（这两个问题暂时没有找到解决办法）<br>ios版这两个问题都没有。<br>视频无法自动播放，目前的解决办法是用户触摸屏幕的时候出发视屏播放事件。（注：video的src要卸载source里面）</li>
-<li>扫码识别<br>Android版的没有什么问题。在iPhone上出现了二维码长安识别不了的办法，找了很久都没找到问题，网上有说是位置偏移的，然后用两张图一张放在正确的位置不显示，一张显示用。我们找了半天也没有找到二维码正确的位置，最后用了一个比较猥琐的办法，两张二维码的图，一张显示，一张覆盖整个页面然后<code>visibility: hidden;</code>,幸好页面上没有什么需要点击的地方…</li>
-<li>页面滚动不顺畅<br>在ios版的微信里会出现问题，解决办法给要滚动区域的元素加上这个属性<code>-webkit-overflow-scrolling: touch;</code>。</li>
-<li><p>ios版会把页面中的一串数字识别成电话<br>ios版会把页面中的一串数字识别成电话然后触摸会调用系统不打电话，解决办法加上meta</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"telephone=no,email=no"</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Android文字变大<br>在一些文字过多的地方Android版微信会把文字变大而ios则不会，这样会导致排版错乱页面变得很丑…<br>解决的办法是给包裹文字的元素加上<code>display: inline-block;</code>。</p>
-</li>
-<li>点击元素产生背景<br>加上这个<code>-webkit-tap-highlight-color: rgba(0,0,0,0);</code></li>
-<li>click的300ms延迟<br>要么禁止页面的缩放，要么如果使用了zepto，则用tap代替click，要么使用fastclick。</li>
-<li>缓存问题非常蛋疼<br>ios可以通过刷新解决，Android用户需要取关然后退出微信重新关注才可以（也可以在X5调试页面清除这些缓存）。建议打包的时候给文件加上版本号，或者用hash字符串作为文件名。</li>
-</ol>
-<p>…<br>写在最后，在微信上还有很多的问题，暂时想不起来了，以后想起来再写。<br>之前在知乎看看多过这样一句话 “移动端的微信全等于pc端的IE6”，嗯 +1。</p>
-
-          
+          <p>前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/02/19/微信开发中的坑/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

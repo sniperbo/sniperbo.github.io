@@ -84,22 +84,16 @@
 
 
 
-<meta name="description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：
-
-视频Android版的视频播放必须全屏，没有办法自定义video的width和height，而且在Android版中视频的层级是最高的，没有办法覆盖，滚你z-index设成多少都没用。（这两个问题暂时没有找到解决办法）ios版这两个问题都没有。视频无法自动播放，目前的解决办法是用户触摸屏幕的时候出发视屏播放事件。（注">
+<meta name="description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信开发中的坑">
 <meta property="og:url" content="http://yoursite.com/2017/02/19/微信开发中的坑/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：
-
-视频Android版的视频播放必须全屏，没有办法自定义video的width和height，而且在Android版中视频的层级是最高的，没有办法覆盖，滚你z-index设成多少都没用。（这两个问题暂时没有找到解决办法）ios版这两个问题都没有。视频无法自动播放，目前的解决办法是用户触摸屏幕的时候出发视屏播放事件。（注">
-<meta property="og:updated_time" content="2017-02-19T10:22:16.865Z">
+<meta property="og:description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：">
+<meta property="og:updated_time" content="2017-02-19T10:24:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信开发中的坑">
-<meta name="twitter:description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：
-
-视频Android版的视频播放必须全屏，没有办法自定义video的width和height，而且在Android版中视频的层级是最高的，没有办法覆盖，滚你z-index设成多少都没用。（这两个问题暂时没有找到解决办法）ios版这两个问题都没有。视频无法自动播放，目前的解决办法是用户触摸屏幕的时候出发视屏播放事件。（注">
+<meta name="twitter:description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：">
 
 
 
@@ -329,6 +323,7 @@
 
       
         <p>前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：</p>
+<a id="more"></a>
 <ol>
 <li>视频<br>Android版的视频播放必须全屏，没有办法自定义video的width和height，而且在Android版中视频的层级是最高的，没有办法覆盖，滚你z-index设成多少都没用。（这两个问题暂时没有找到解决办法）<br>ios版这两个问题都没有。<br>视频无法自动播放，目前的解决办法是用户触摸屏幕的时候出发视屏播放事件。（注：video的src要卸载source里面）</li>
 <li>扫码识别<br>Android版的没有什么问题。在iPhone上出现了二维码长安识别不了的办法，找了很久都没找到问题，网上有说是位置偏移的，然后用两张图一张放在正确的位置不显示，一张显示用。我们找了半天也没有找到二维码正确的位置，最后用了一个比较猥琐的办法，两张二维码的图，一张显示，一张覆盖整个页面然后<code>visibility: hidden;</code>,幸好页面上没有什么需要点击的地方…</li>
