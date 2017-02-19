@@ -258,6 +258,140 @@
             
               
                 
+                <a class="post-title-link" href="/2017/02/19/微信开发中的坑/" itemprop="url">
+                  微信开发中的坑
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-19T17:21:55+08:00" content="2017-02-19">
+              2017-02-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/study-blog/" itemprop="url" rel="index">
+                    <span itemprop="name">study_blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/19/微信开发中的坑/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/19/微信开发中的坑/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：</p>
+<ol>
+<li>视频<br>Android版的视频播放必须全屏，没有办法自定义video的width和height，而且在Android版中视频的层级是最高的，没有办法覆盖，滚你z-index设成多少都没用。（这两个问题暂时没有找到解决办法）<br>ios版这两个问题都没有。<br>视频无法自动播放，目前的解决办法是用户触摸屏幕的时候出发视屏播放事件。（注：video的src要卸载source里面）</li>
+<li>扫码识别<br>Android版的没有什么问题。在iPhone上出现了二维码长安识别不了的办法，找了很久都没找到问题，网上有说是位置偏移的，然后用两张图一张放在正确的位置不显示，一张显示用。我们找了半天也没有找到二维码正确的位置，最后用了一个比较猥琐的办法，两张二维码的图，一张显示，一张覆盖整个页面然后<code>visibility: hidden;</code>,幸好页面上没有什么需要点击的地方…</li>
+<li>页面滚动不顺畅<br>在ios版的微信里会出现问题，解决办法给要滚动区域的元素加上这个属性<code>-webkit-overflow-scrolling: touch;</code>。</li>
+<li><p>ios版会把页面中的一串数字识别成电话<br>ios版会把页面中的一串数字识别成电话然后触摸会调用系统不打电话，解决办法加上meta</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"telephone=no,email=no"</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> /&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Android文字变大<br>在一些文字过多的地方Android版微信会把文字变大而ios则不会，这样会导致排版错乱页面变得很丑…<br>解决的办法是给包裹文字的元素加上<code>display: inline-block;</code>。</p>
+</li>
+<li>点击元素产生背景<br>加上这个<code>-webkit-tap-highlight-color: rgba(0,0,0,0);</code></li>
+<li>click的300ms延迟<br>要么禁止页面的缩放，要么如果使用了zepto，则用tap代替click，要么使用fastclick。</li>
+<li>缓存问题非常蛋疼<br>ios可以通过刷新解决，Android用户需要取关然后退出微信重新关注才可以（也可以在X5调试页面清除这些缓存）。建议打包的时候给文件加上版本号，或者用hash字符串作为文件名。</li>
+</ol>
+<p>…<br>写在最后，在微信上还有很多的问题，暂时想不起来了，以后想起来再写。<br>之前在知乎看看多过这样一句话 “移动端的微信全等于pc端的IE6”，嗯 +1。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/31/总结-2016年终总结/" itemprop="url">
                   [总结]2016年终总结
                 </a>
@@ -853,132 +987,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/19/JavaScript算法之分页-备忘/" itemprop="url">
-                  JavaScript算法之分页(备忘)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-19T20:05:54+08:00" content="2016-11-19">
-              2016-11-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/study-blog/" itemprop="url" rel="index">
-                    <span itemprop="name">study_blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/19/JavaScript算法之分页-备忘/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/19/JavaScript算法之分页-备忘/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>很久没写东西了，哎…</p>
-<p>不能荒废了这博客，还是写点废话吧…</p>
-<p>最近开始实习了，然后最近在做一个项目，其中有一个评论的分页搞得我很是头疼，最后写了个小小的算法。</p>
-<p>记录下来做备忘吧！！！</p>
-<p>不多说，直接上代码：</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/19/JavaScript算法之分页-备忘/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1024,7 +1032,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1041,7 +1049,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
