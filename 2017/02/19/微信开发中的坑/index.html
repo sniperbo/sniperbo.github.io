@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/19/微信开发中的坑/index.html">
 <meta property="og:site_name" content="赵的拇指">
 <meta property="og:description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：">
-<meta property="og:updated_time" content="2017-02-19T10:24:33.000Z">
+<meta property="og:updated_time" content="2017-02-24T14:39:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信开发中的坑">
 <meta name="twitter:description" content="前些日子一直在做一些微信公众号的H5开发，在开发过程中遇到了不少坑。记录一下：">
@@ -336,6 +336,8 @@
 <li>点击元素产生背景<br>加上这个<code>-webkit-tap-highlight-color: rgba(0,0,0,0);</code></li>
 <li>click的300ms延迟<br>要么禁止页面的缩放，要么如果使用了zepto，则用tap代替click，要么使用fastclick。</li>
 <li>缓存问题非常蛋疼<br>ios可以通过刷新解决，Android用户需要取关然后退出微信重新关注才可以（也可以在X5调试页面清除这些缓存）。建议打包的时候给文件加上版本号，或者用hash字符串作为文件名。</li>
+<li>动态更改title<br>在andriod下没有问题，但是在ios下就会有这个问题，有时候更改会失败，可以用iframe来解决这个问题，代码如下（我是用vue写的）<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">:src</span>=<span class="string">"bugTitle"</span> <span class="attr">style</span>=<span class="string">"display: none"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    ...</div><div class="line">    data() &#123;</div><div class="line">        return &#123;</div><div class="line">            bugtitle: ''</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    methods: &#123;</div><div class="line">        setTitle(title) &#123;</div><div class="line">            document.title = title;</div><div class="line">            // 判断是否为ios，ios通过iframe来刷新title</div><div class="line">            if (navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) &#123;</div><div class="line">                this.bugTitle = '/favicon.ico' + Date.parse(new Date());</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    ...</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>…<br>写在最后，在微信上还有很多的问题，暂时想不起来了，以后想起来再写。<br>之前在知乎看看多过这样一句话 “移动端的微信全等于pc端的IE6”，嗯 +1。</p>
 
@@ -373,8 +375,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/17/diary-回校考四级/" rel="next" title="[diary]回校考四级">
-                <i class="fa fa-chevron-left"></i> [diary]回校考四级
+              <a href="/2016/12/31/总结-2016年终总结/" rel="next" title="[总结]2016年终总结">
+                <i class="fa fa-chevron-left"></i> [总结]2016年终总结
               </a>
             
           </div>
@@ -451,7 +453,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

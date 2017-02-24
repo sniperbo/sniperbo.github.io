@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,css," />
+  <meta name="keywords" content="总结," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="这两天看一些关于面试的题目，老是会看到BFC这个词。作为一个野路子页面仔，对于这类的名词到底是什么还是懵逼的。那这个BFC到底是个什么呢？经过一番查阅发现原来就是这个东西…">
+<meta name="description" content="转眼就快到2017年了，2016年这一年发生了太多的事，值得我写个简单流水账记录一下。
+以及写下对2017年的一点小小的规划。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于BFC的一些姿势">
-<meta property="og:url" content="http://yoursite.com/2016/10/08/关于BFC的一些姿势/index.html">
+<meta property="og:title" content="[总结]2016年终总结">
+<meta property="og:url" content="http://yoursite.com/2016/12/31/总结-2016年终总结/index.html">
 <meta property="og:site_name" content="赵的拇指">
-<meta property="og:description" content="这两天看一些关于面试的题目，老是会看到BFC这个词。作为一个野路子页面仔，对于这类的名词到底是什么还是懵逼的。那这个BFC到底是个什么呢？经过一番查阅发现原来就是这个东西…">
-<meta property="og:updated_time" content="2016-10-08T14:58:18.489Z">
+<meta property="og:description" content="转眼就快到2017年了，2016年这一年发生了太多的事，值得我写个简单流水账记录一下。
+以及写下对2017年的一点小小的规划。">
+<meta property="og:updated_time" content="2016-12-31T11:35:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于BFC的一些姿势">
-<meta name="twitter:description" content="这两天看一些关于面试的题目，老是会看到BFC这个词。作为一个野路子页面仔，对于这类的名词到底是什么还是懵逼的。那这个BFC到底是个什么呢？经过一番查阅发现原来就是这个东西…">
+<meta name="twitter:title" content="[总结]2016年终总结">
+<meta name="twitter:description" content="转眼就快到2017年了，2016年这一年发生了太多的事，值得我写个简单流水账记录一下。
+以及写下对2017年的一点小小的规划。">
 
 
 
@@ -114,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/08/关于BFC的一些姿势/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/31/总结-2016年终总结/"/>
 
-  <title> 关于BFC的一些姿势 | 赵的拇指 </title>
+  <title> [总结]2016年终总结 | 赵的拇指 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +259,7 @@
             
             
               
-                关于BFC的一些姿势
+                [总结]2016年终总结
               
             
           </h1>
@@ -268,8 +271,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-08T22:09:18+08:00" content="2016-10-08">
-              2016-10-08
+            <time itemprop="dateCreated" datetime="2016-12-31T18:34:39+08:00" content="2016-12-31">
+              2016-12-31
             </time>
           </span>
 
@@ -282,8 +285,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/study-blog/" itemprop="url" rel="index">
-                    <span itemprop="name">study_blog</span>
+                  <a href="/categories/life-blog/" itemprop="url" rel="index">
+                    <span itemprop="name">life_blog</span>
                   </a>
                 </span>
 
@@ -298,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/08/关于BFC的一些姿势/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/08/关于BFC的一些姿势/" itemprop="commentsCount"></span>
+                <a href="/2016/12/31/总结-2016年终总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/31/总结-2016年终总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,35 +325,42 @@
       
 
       
-        <p>这两天看一些关于面试的题目，老是会看到<strong>BFC</strong>这个词。作为一个野路子页面仔，对于这类的名词到底是什么还是懵逼的。<br>那这个<strong>BFC</strong>到底是个什么呢？经过一番查阅发现原来就是这个东西…</p>
+        <p>转眼就快到2017年了，2016年这一年发生了太多的事，值得我写个简单流水账记录一下。</p>
+<p>以及写下对2017年的一点小小的规划。</p>
 <a id="more"></a>
-<p><strong>BFC</strong>全称是”Block Formating Context”，<a href="https://www.w3.org/TR/CSS21/visuren.html#block-formatting" target="_blank" rel="external">官方解释</a>，翻译翻译就是块级格式话上下文，再翻译翻译就是按照块级盒子布局。<br>一个页面是由很多个<strong>盒子</strong> 组成的,不同类型的<strong>盒子</strong>,会参与不同的 Formatting Context（决定如何渲染文档的容器）,因此<strong>盒子</strong>内的元素会以不同的方式渲染,这就是说<em>BFC内部的元素和外部的元素不会互相影响</em>。</p>
-<h2 id="首先看看BFC的形成条件"><a href="#首先看看BFC的形成条件" class="headerlink" title="首先看看BFC的形成条件"></a>首先看看BFC的形成条件</h2><ol>
-<li>float的值不为none；</li>
-<li>position的值不为static或relative；</li>
-<li>display的值是inline-block、table-cell、table-caption、flex、inline-flex；</li>
-<li>overflow的值不为visible。</li>
-</ol>
-<p>以上四个条件<strong>只要满足</strong>一个即可（多个也可）。</p>
-<h2 id="BFC中的盒子的布局模式"><a href="#BFC中的盒子的布局模式" class="headerlink" title="BFC中的盒子的布局模式"></a>BFC中的盒子的布局模式</h2><p>在一个BFC中，块盒与行盒（行盒由一行中所有的内联元素所组成）都会垂直的沿着其父元素的边框排列。<br>w3c规范如下：</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=26473418&auto=1&height=66"></iframe>
+
 <blockquote>
-<p>在BFC中，每一个盒子的左外边缘（margin-left）会触碰到容器的左边缘(border-left)（对于从右到左的格式来说，则触碰到右边缘）。浮动也是如此（尽管盒子里的行盒子 Line Box 可能由于浮动而变窄），除非盒子创建了一个新的BFC（在这种情况下盒子本身可能由于浮动而变窄）。</p>
+<p><strong>Forever young</strong><br>Let’s dance in style<br>让我们跳个最流行的舞<br>Let’s dance for a while<br>让我们尽情舞蹈<br>Heaven can wait<br>让天堂会为我们等候<br>We’re only watching the skies<br>我们只需仰望天空<br>Hoping for the best but expecting the worst<br>我们保持乐观的态度但预料最坏的结果<br>Are you going to drop the bomb or not<br>你是否觉得自己会不会就像定时炸弹随时爆炸<br>Let us die young or let us live forever<br>让我们年轻时死去或者永生<br>We don’t have the power but we never say never<br>我们没有力量但永不放弃<br>Sitting in a sandpit<br>坐在沙坑上<br>Life is a short trip<br>生命就像一次短暂的旅行<br>The music is for the sad men<br>音乐是属于悲伤的人们<br>Can you imagine when this race is won<br>你能否想像这场赛跑胜利的时候<br>Turn our golden faces into the sun<br>将我们金色的面孔面向太阳<br>Praising our leaders<br>我们歌颂领导者<br>We’re getting in tune<br>我们和谐的歌唱着<br>The music is played by the mad men<br>音乐由疯狂的人们演奏<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever<br>永远<br>and ever<br>永远<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever young<br>永远年轻<br>Some are like water some are like the heat<br>有些人似水般柔情，有些人如火般热情<br>Some are a melody and some are the beat<br>有些人如旋律般悠扬，有些人像节奏般规距<br>Sooner or later they all will be gone<br>迟早他们都会离去<br>Why don’t they stay young?<br>为什么他们不能永远年轻呢<br>It’s so hard to get old without a cause<br>没有理由的老去是很难以接受的<br>I don’t want to perish like a fading horse<br>我不想像衰老的马般死去<br>Youth is like diamonds in the sun<br>青春就像阳光下的钻石般璀璨<br>And diamonds are forever<br>而钻石是永恒的<br>So many adventures couldn’t happen today<br>有很多冒险无法经历<br>So many songs we forgot to play<br>有很多歌曲已被我们遗忘<br>So many dreams swinging out of the blue<br>许多梦想在蔚蓝的天空之下迸发<br>We’ll let them come true<br>我们会让它们成真<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever<br>永远<br>and ever<br>永远<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever<br>永远<br>and ever<br>永远<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever<br>永远<br>and ever<br>永远<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever young<br>永远年轻<br>I want to be forever young<br>我想永远年轻<br>Do you really want to live forever<br>你是否真的希望永远年轻<br>Forever young<br>永远年轻  </p>
 </blockquote>
-<h2 id="BFC的一些作用"><a href="#BFC的一些作用" class="headerlink" title="BFC的一些作用"></a>BFC的一些作用</h2><h3 id="外边距折叠"><a href="#外边距折叠" class="headerlink" title="外边距折叠"></a>外边距折叠</h3><p>在常规的流布局中，两盒子的距离由外边距<code>margin</code>决定，一般遵循以下规则：</p>
+<p>先来一首音乐。<br>这首Bob Dylan的《Forever young》是我今年经常单曲循环的一首歌，不知道为什么，歌名是forever young，而我现在正是年轻的时候却喜欢这首歌。</p>
+<p>下面进入正题。</p>
+<p>2016年可以说是大学这几年最为丰富的一年，倒不是说学到了什么或是收获了什么，最主要的是这一年经历了太多东西。</p>
+<p>把主要的几件事情说一下吧。</p>
 <ol>
-<li>两个相邻的外边距都是正数的时候，外边距取二者较大的；</li>
-<li>两个相邻的外边距都是负数的时候，外边距取二者绝对值较大的；</li>
-<li>两个相邻的外边距一正一负的时候，取二值之和。</li>
+<li>分手（悲催的事…）。</li>
+<li>做项目，拿到第一笔靠自己所学技术得来的钱，虽然不多。</li>
+<li>和老师同学的公司成立，不过并没有什么实质性的营收，不过劳资现在也是一个有股份的人，呵呵。</li>
+<li>出来找工作，悲催的被拒好多次，不顺利。</li>
+<li>找到工作，结识到一群有意思的小伙伴。</li>
 </ol>
-<p>而如果两个盒子在不同的BFC中他们的外边距就不会折叠</p>
-<h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p>常规的浮动元素会脱离文档流，就不会撑开父元素（父元素没有设置height），这时可以用BFC来清除浮动，常见的清除浮动方法<code>overflow: auto;</code>就是这个道理。<br>同理，文字环绕也可以这么解决。</p>
-<h3 id="多列布局"><a href="#多列布局" class="headerlink" title="多列布局"></a>多列布局</h3><p>以下代码可以轻松实现一个两列布局，左边定宽，右边自动占满。</p>
-<p>css:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.sidebar</span>&#123;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#10ae58</span>;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>:<span class="number">180px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.main</span>&#123;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#3d3d3d</span>;</div><div class="line">	<span class="attribute">overflow</span>:hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>html:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>侧边内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>主要内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>三列四列更多列实现方法也是类似。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>其实在之前写代码的过程中一直有在用<strong>BFC</strong>的相关姿势，只是自己不知道而已。<br>哎，还是自己的基础知识太薄弱。<br>还有以上文章内容纯属自己的个人片面理解，如有不同见解欢迎留下意见。</p>
-<p>…</p>
-<p>停电了，网也断了，坑爹的学校啊，还得手机开热点上传这篇…</p>
+<p>大事就是这么多了，其他还有些小事，就不在赘述了。</p>
+<p>总得来说，我对今年的自己不是很满意。为什么呢？</p>
+<p>因为首先来说今年的自己相比于去年的自己提升的并不是很高，无论是技术上还是个人修养，其次就是去年定下的目标并没有全部实现。还有就是一些坏毛病还是没能改掉（比如不能持续性的做一件事，希望能坚持写博客…）。</p>
+<p>如今在一家创业公司实习，虽然很累，几乎每天加班，但是每天都过的很充实，希望自己可以学到更多的东西。</p>
+<p>好了上面就是一个简单的总结，下面要来说说对于2017年的自己的规划了。</p>
+<ol>
+<li>学习，积极的拥抱新的技术，以及对一些基础知识的学习，其次还要学一些前端之外的东西（包括但不限于node.js,python,php）</li>
+<li>努力工作攒钱</li>
+<li>完成一次毕业旅行</li>
+<li>攒钱买mac</li>
+<li>健身</li>
+<li>练字</li>
+<li>看书，至少看完kindle上一半的书</li>
+</ol>
+<p>暂时想到的就这么多，可能完成不了，但是努力去做吧。</p>
+<p>现在是2016年12月31日19:31，马上就是2017年了。</p>
+<p>加油，finghting 2017！！！</p>
 
       
     </div>
@@ -373,9 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
-          
-            <a href="/tags/css/" rel="tag">#css</a>
+            <a href="/tags/总结/" rel="tag">#总结</a>
           
         </div>
       
@@ -384,16 +392,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/08/JavaScript算法之数组去重/" rel="next" title="JavaScript算法之数组去重">
-                <i class="fa fa-chevron-left"></i> JavaScript算法之数组去重
+              <a href="/2016/12/17/diary-回校考四级/" rel="next" title="[diary]回校考四级">
+                <i class="fa fa-chevron-left"></i> [diary]回校考四级
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/19/JavaScript算法之分页-备忘/" rel="prev" title="JavaScript算法之分页(备忘)">
-                JavaScript算法之分页(备忘) <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/19/微信开发中的坑/" rel="prev" title="微信开发中的坑">
+                微信开发中的坑 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -420,8 +428,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/08/关于BFC的一些姿势/"
-           data-title="关于BFC的一些姿势" data-url="http://yoursite.com/2016/10/08/关于BFC的一些姿势/">
+      <div class="ds-thread" data-thread-key="2016/12/31/总结-2016年终总结/"
+           data-title="[总结]2016年终总结" data-url="http://yoursite.com/2016/12/31/总结-2016年终总结/">
       </div>
     
   </div>
@@ -541,7 +549,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先看看BFC的形成条件"><span class="nav-number">1.</span> <span class="nav-text">首先看看BFC的形成条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC中的盒子的布局模式"><span class="nav-number">2.</span> <span class="nav-text">BFC中的盒子的布局模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC的一些作用"><span class="nav-number">3.</span> <span class="nav-text">BFC的一些作用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#外边距折叠"><span class="nav-number">3.1.</span> <span class="nav-text">外边距折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动"><span class="nav-number">3.2.</span> <span class="nav-text">清除浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多列布局"><span class="nav-number">3.3.</span> <span class="nav-text">多列布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后"><span class="nav-number">4.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
