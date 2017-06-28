@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,前端," />
+  <meta name="keywords" content="前端,JavaScript," />
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:description" content="要说 JavaScript 的拷贝问题，首先要了解的是 JavaScript 的数据类型。在 JavaScript 中数据类型大致可以分成三类，分别是基本数据类型、引用数据类型和特殊数据类型。">
 <meta property="og:image" content="http://od4k4xerr.bkt.clouddn.com/2017040301.png">
 <meta property="og:image" content="http://od4k4xerr.bkt.clouddn.com/2017040302.png">
-<meta property="og:updated_time" content="2017-04-03T16:43:56.000Z">
+<meta property="og:updated_time" content="2017-04-03T16:47:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中的拷贝">
 <meta name="twitter:description" content="要说 JavaScript 的拷贝问题，首先要了解的是 JavaScript 的数据类型。在 JavaScript 中数据类型大致可以分成三类，分别是基本数据类型、引用数据类型和特殊数据类型。">
@@ -327,7 +327,7 @@
       
         <p>要说 JavaScript 的拷贝问题，首先要了解的是 JavaScript 的数据类型。<br>在 JavaScript 中数据类型大致可以分成三类，分别是基本数据类型、引用数据类型和特殊数据类型。<br><a id="more"></a><br>基本数据类型有：<code>Number</code>、<code>String</code>、<code>Boolean</code>、<br>引用数据类型有：<code>Object</code>(其中包含<code>Array</code>, <code>Object</code>, <code>Date</code>, <code>RegExp</code>)<br>特殊数据类型：<code>Null</code>、<code>Undefined</code><br>ES6 引入了一种新的原始数据类型 <code>Symbol</code>，表示独一无二的值。所以现在JavaScript中一共有7种数据类型。</p>
 <p>其中特殊类型<code>Undefined</code>是变量声明了但是没有赋值，<code>Null</code>表示一个无的对象是一个<code>Object</code>，这两者在判断语句中都会被转成<code>false</code>，其实都是表示没有，但为什么要有两个，说起来比较复杂，可以看看阮老师的文章<a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html" target="_blank" rel="external">undefined与null的区别</a>。</p>
-<p>继续往下说，下面简单说说基本数据类型和引用数据类型的区别。<br>最大的区别就是，基本数据类型的变量标识符和变量值都存在栈内存，而引用类型在栈内存中存储的是变量标识符和指针，然后在堆内存中保存对象内容。如下图：<br><img src="http://od4k4xerr.bkt.clouddn.com/2017040301.png" alt="基本类型引用类型存储示意图">。</p>
+<p>继续往下说，下面简单说说基本数据类型和引用数据类型的区别。<br>最大的区别就是，基本数据类型的变量标识符和变量值都存在栈内存，而引用类型在栈内存中存储的是变量标识符和指针，然后在堆内存中保存对象内容。如下图：<br><img src="http://od4k4xerr.bkt.clouddn.com/2017040301.png" alt="基本类型引用类型存储示意图"></p>
 <p>现在开始说拷贝的问题，基本数据类型，我们直接<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">let</span> a1 = a;</div></pre></td></tr></table></figure></p>
 <p>就可以了。而如果是引用类型这样的话<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> b = &#123;a: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">let</span> b1 = b;</div></pre></td></tr></table></figure></p>
 <p>此时<code>b</code>和<code>b1</code>的值就会互相影响也就是改变了他们中任何一个值，另外一个值也会相应的改变。<br>来个图：<br><img src="http://od4k4xerr.bkt.clouddn.com/2017040302.png" alt="基本类型和引用类型的普通拷贝"></p>
@@ -335,7 +335,7 @@
 <p>在jQuery中我们可以直接使用jQuery的<code>extend()</code>方法来进行深拷贝。</p>
 <p>使用原生JavaScript我们应该这么做呢？</p>
 <p>如果是<code>Array</code>，且数组中的数据都是基本数据类型，我们可以利用数组中的<code>slice()</code>方法来返回一个新的数组，像这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> arrA = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>];</div><div class="line"><span class="keyword">let</span> arrA1 = arrA.slice();</div></pre></td></tr></table></figure></p>
-<p>如果是<code>Object</code>的keyvalue pair，且对应的value都是基本数据类型，则可以用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external"><code>Object.assign()</code></a>来操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = &#123;a: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">let</span> a1 = <span class="built_in">Object</span>.assign(&#123;&#125;, a);</div></pre></td></tr></table></figure></p>
+<p>如果是<code>Object</code>的keyValuePair，且对应的value都是基本数据类型，则可以用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="external"><code>Object.assign()</code></a>来操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = &#123;a: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">let</span> a1 = <span class="built_in">Object</span>.assign(&#123;&#125;, a);</div></pre></td></tr></table></figure></p>
 <p>上述两种方法，只能在特定的情况下有用，一旦数组的值是引用类型或者对象中value的值是一个引用类型，就不起作用了。如果遇到复杂的数据类型该怎么进行深拷贝呢？以前在不少帖子里看过说使用JSON来做个中转，类似于这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = &#123;a: &#123;a : &#123;a: <span class="number">1</span>&#125;&#125;&#125;;</div><div class="line"><span class="keyword">let</span> a1 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div></pre></td></tr></table></figure></p>
 <p>这个方法好像很无敌，貌似无论多么复杂的数据类型都能深拷贝，但是一旦遇到key对应的value是Function或者其他JSON不支持的类型就不行了，可以参照stackoverflow上的这个回答<a href="http://stackoverflow.com/questions/20662319/javascript-deep-copy-using-json" target="_blank" rel="external">javascript deep copy using JSON</a></p>
 <p>所以在JavaScript中深拷贝是一件非常费事的事情。大部分情况下我们并不需要深拷贝，再仔细看看自己写的函数非得深拷贝不可吗？</p>
@@ -372,9 +372,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
-          
             <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
       
@@ -390,6 +390,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/28/JavaScript算法之sku/" rel="prev" title="JavaScript算法之sku">
+                JavaScript算法之sku <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -461,7 +465,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
